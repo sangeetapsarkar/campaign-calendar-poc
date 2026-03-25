@@ -1,5 +1,4 @@
 # Smart Campaign Calendar (AI Powered)
-
 A marketing planning dashboard with AI agents for:
 - Campaign date optimization
 - High impact campaign idea generation
@@ -9,6 +8,11 @@ A marketing planning dashboard with AI agents for:
 - AI insights panel
 - Token usage tracking
 - Gemini / Vertex AI integration
+
+## Built using:
+- Node.js
+- Gemini API
+- Vanilla JS frontend
 
 ## Setup
 
