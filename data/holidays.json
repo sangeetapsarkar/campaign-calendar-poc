@@ -1,0 +1,1165 @@
+[
+  {
+    "event_name": "New Year's Day",
+    "event_type": "civic",
+    "start_date": "2026-01-01",
+    "end_date": "2026-01-01",
+    "state": "National",
+    "city_or_region": "Across India",
+    "primary_crowd_type": "families",
+    "likely_spend_categories": [
+      "food",
+      "entertainment",
+      "shopping"
+    ],
+    "confidence_score": 100,
+    "source_type": "government"
+  },
+  {
+    "event_name": "Lohri",
+    "event_type": "religious",
+    "start_date": "2026-01-13",
+    "end_date": "2026-01-13",
+    "state": "Punjab",
+    "city_or_region": "Across Punjab",
+    "primary_crowd_type": "locals",
+    "likely_spend_categories": [
+      "food",
+      "donations"
+    ],
+    "confidence_score": 95,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Makar Sankranti",
+    "event_type": "religious",
+    "start_date": "2026-01-14",
+    "end_date": "2026-01-14",
+    "state": "National",
+    "city_or_region": "Across India",
+    "primary_crowd_type": "families",
+    "likely_spend_categories": [
+      "food",
+      "donations",
+      "shopping"
+    ],
+    "confidence_score": 98,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Pongal",
+    "event_type": "religious",
+    "start_date": "2026-01-15",
+    "end_date": "2026-01-18",
+    "state": "Tamil Nadu",
+    "city_or_region": "Across Tamil Nadu",
+    "primary_crowd_type": "locals",
+    "likely_spend_categories": [
+      "food",
+      "shopping",
+      "donations"
+    ],
+    "confidence_score": 97,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Magh Bihu",
+    "event_type": "religious",
+    "start_date": "2026-01-15",
+    "end_date": "2026-01-16",
+    "state": "Assam",
+    "city_or_region": "Across Assam",
+    "primary_crowd_type": "locals",
+    "likely_spend_categories": [
+      "food",
+      "entertainment",
+      "shopping"
+    ],
+    "confidence_score": 95,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Republic Day",
+    "event_type": "civic",
+    "start_date": "2026-01-26",
+    "end_date": "2026-01-26",
+    "state": "National",
+    "city_or_region": "Across India",
+    "primary_crowd_type": "families",
+    "likely_spend_categories": [
+      "transit",
+      "food"
+    ],
+    "confidence_score": 100,
+    "source_type": "government"
+  },
+  {
+    "event_name": "Saraswati Puja / Vasant Panchami",
+    "event_type": "religious",
+    "start_date": "2026-01-28",
+    "end_date": "2026-01-28",
+    "state": "National",
+    "city_or_region": "Across North and East India",
+    "primary_crowd_type": "students",
+    "likely_spend_categories": [
+      "donations",
+      "shopping",
+      "food"
+    ],
+    "confidence_score": 95,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Union Budget Presentation",
+    "event_type": "civic",
+    "start_date": "2026-02-01",
+    "end_date": "2026-02-01",
+    "state": "National",
+    "city_or_region": "New Delhi",
+    "primary_crowd_type": "general",
+    "likely_spend_categories": [
+      "shopping",
+      "investments"
+    ],
+    "confidence_score": 90,
+    "source_type": "government"
+  },
+  {
+    "event_name": "India Art Fair",
+    "event_type": "tourism",
+    "start_date": "2026-02-05",
+    "end_date": "2026-02-08",
+    "state": "Delhi",
+    "city_or_region": "New Delhi",
+    "primary_crowd_type": "tourists",
+    "likely_spend_categories": [
+      "travel",
+      "hotels",
+      "food",
+      "shopping",
+      "entertainment"
+    ],
+    "confidence_score": 80,
+    "source_type": "indiaartfair.in (estimated)"
+  },
+  {
+    "event_name": "Rath Saptami",
+    "event_type": "religious",
+    "start_date": "2026-02-05",
+    "end_date": "2026-02-05",
+    "state": "National",
+    "city_or_region": "Across India",
+    "primary_crowd_type": "pilgrims",
+    "likely_spend_categories": [
+      "donations",
+      "food"
+    ],
+    "confidence_score": 95,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Shivaji Jayanti",
+    "event_type": "civic",
+    "start_date": "2026-02-19",
+    "end_date": "2026-02-19",
+    "state": "Maharashtra",
+    "city_or_region": "Across Maharashtra",
+    "primary_crowd_type": "locals",
+    "likely_spend_categories": [
+      "entertainment",
+      "food"
+    ],
+    "confidence_score": 98,
+    "source_type": "government"
+  },
+  {
+    "event_name": "Maha Shivaratri",
+    "event_type": "religious",
+    "start_date": "2026-02-24",
+    "end_date": "2026-02-24",
+    "state": "National",
+    "city_or_region": "Across India",
+    "primary_crowd_type": "pilgrims",
+    "likely_spend_categories": [
+      "donations",
+      "food"
+    ],
+    "confidence_score": 98,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Holi (Holika Dahan)",
+    "event_type": "religious",
+    "start_date": "2026-03-03",
+    "end_date": "2026-03-03",
+    "state": "National",
+    "city_or_region": "North India",
+    "primary_crowd_type": "families",
+    "likely_spend_categories": [
+      "food",
+      "shopping",
+      "entertainment"
+    ],
+    "confidence_score": 97,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Holi (Rangwali Holi)",
+    "event_type": "religious",
+    "start_date": "2026-03-04",
+    "end_date": "2026-03-04",
+    "state": "National",
+    "city_or_region": "Across India (especially North)",
+    "primary_crowd_type": "families",
+    "likely_spend_categories": [
+      "food",
+      "shopping",
+      "entertainment"
+    ],
+    "confidence_score": 98,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Ugadi / Gudi Padwa",
+    "event_type": "religious",
+    "start_date": "2026-03-19",
+    "end_date": "2026-03-19",
+    "state": "Karnataka, Andhra Pradesh, Telangana, Maharashtra",
+    "city_or_region": "Southern & Western India",
+    "primary_crowd_type": "locals",
+    "likely_spend_categories": [
+      "food",
+      "shopping",
+      "donations"
+    ],
+    "confidence_score": 96,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Cheti Chand",
+    "event_type": "religious",
+    "start_date": "2026-03-20",
+    "end_date": "2026-03-20",
+    "state": "National",
+    "city_or_region": "Across India (Sindhi community)",
+    "primary_crowd_type": "locals",
+    "likely_spend_categories": [
+      "food",
+      "donations"
+    ],
+    "confidence_score": 95,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Chaitra Navratri",
+    "event_type": "religious",
+    "start_date": "2026-03-20",
+    "end_date": "2026-03-28",
+    "state": "National",
+    "city_or_region": "North, West and Central India",
+    "primary_crowd_type": "families",
+    "likely_spend_categories": [
+      "donations",
+      "food",
+      "shopping"
+    ],
+    "confidence_score": 95,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Ram Navami",
+    "event_type": "religious",
+    "start_date": "2026-03-26",
+    "end_date": "2026-03-26",
+    "state": "National",
+    "city_or_region": "North, West, Central India",
+    "primary_crowd_type": "pilgrims",
+    "likely_spend_categories": [
+      "donations",
+      "food"
+    ],
+    "confidence_score": 97,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Mahavir Jayanti",
+    "event_type": "religious",
+    "start_date": "2026-04-01",
+    "end_date": "2026-04-01",
+    "state": "National",
+    "city_or_region": "Across India (Jain community)",
+    "primary_crowd_type": "pilgrims",
+    "likely_spend_categories": [
+      "donations",
+      "food"
+    ],
+    "confidence_score": 95,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Good Friday",
+    "event_type": "religious",
+    "start_date": "2026-04-03",
+    "end_date": "2026-04-03",
+    "state": "National",
+    "city_or_region": "Across India (Christian community)",
+    "primary_crowd_type": "locals",
+    "likely_spend_categories": [
+      "donations",
+      "food"
+    ],
+    "confidence_score": 98,
+    "source_type": "publicholidays.in"
+  },
+  {
+    "event_name": "Easter Sunday",
+    "event_type": "religious",
+    "start_date": "2026-04-05",
+    "end_date": "2026-04-05",
+    "state": "National",
+    "city_or_region": "Across India (Christian community)",
+    "primary_crowd_type": "families",
+    "likely_spend_categories": [
+      "food",
+      "shopping",
+      "donations"
+    ],
+    "confidence_score": 98,
+    "source_type": "publicholidays.in"
+  },
+  {
+    "event_name": "Ambedkar Jayanti",
+    "event_type": "civic",
+    "start_date": "2026-04-14",
+    "end_date": "2026-04-14",
+    "state": "National",
+    "city_or_region": "Across India",
+    "primary_crowd_type": "locals",
+    "likely_spend_categories": [
+      "food",
+      "transit"
+    ],
+    "confidence_score": 98,
+    "source_type": "government"
+  },
+  {
+    "event_name": "Vishu",
+    "event_type": "religious",
+    "start_date": "2026-04-14",
+    "end_date": "2026-04-14",
+    "state": "Kerala",
+    "city_or_region": "Across Kerala",
+    "primary_crowd_type": "families",
+    "likely_spend_categories": [
+      "food",
+      "shopping",
+      "donations"
+    ],
+    "confidence_score": 95,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Baisakhi / Pohela Boishakh",
+    "event_type": "religious",
+    "start_date": "2026-04-14",
+    "end_date": "2026-04-14",
+    "state": "Punjab, West Bengal",
+    "city_or_region": "Northern & Eastern India",
+    "primary_crowd_type": "families",
+    "likely_spend_categories": [
+      "food",
+      "shopping",
+      "donations"
+    ],
+    "confidence_score": 95,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Eid al-Fitr (Expected)",
+    "event_type": "religious",
+    "start_date": "2026-03-20",
+    "end_date": "2026-03-21",
+    "state": "National",
+    "city_or_region": "Across India",
+    "primary_crowd_type": "families",
+    "likely_spend_categories": [
+      "food",
+      "shopping",
+      "donations",
+      "travel"
+    ],
+    "confidence_score": 85,
+    "source_type": "religious_authority (moon sighting dependent)"
+  },
+  {
+    "event_name": "Akshaya Tritiya",
+    "event_type": "religious",
+    "start_date": "2026-04-20",
+    "end_date": "2026-04-20",
+    "state": "National",
+    "city_or_region": "Across India",
+    "primary_crowd_type": "families",
+    "likely_spend_categories": [
+      "shopping",
+      "gold",
+      "investments"
+    ],
+    "confidence_score": 95,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Labour Day",
+    "event_type": "civic",
+    "start_date": "2026-05-01",
+    "end_date": "2026-05-01",
+    "state": "National",
+    "city_or_region": "Across India",
+    "primary_crowd_type": "general",
+    "likely_spend_categories": [
+      "food",
+      "entertainment"
+    ],
+    "confidence_score": 100,
+    "source_type": "government"
+  },
+  {
+    "event_name": "Indian Premier League (IPL) Final (Expected)",
+    "event_type": "sports",
+    "start_date": "2026-05-24",
+    "end_date": "2026-05-24",
+    "state": "National",
+    "city_or_region": "Major metros",
+    "primary_crowd_type": "locals",
+    "likely_spend_categories": [
+      "entertainment",
+      "food",
+      "shopping",
+      "travel"
+    ],
+    "confidence_score": 75,
+    "source_type": "BCCI (estimated)"
+  },
+  {
+    "event_name": "Char Dham Yatra Opening (Expected)",
+    "event_type": "religious",
+    "start_date": "2026-05-01",
+    "end_date": "2026-11-05",
+    "state": "Uttarakhand",
+    "city_or_region": "Gangotri, Yamunotri, Kedarnath, Badrinath",
+    "primary_crowd_type": "pilgrims",
+    "likely_spend_categories": [
+      "travel",
+      "hotels",
+      "food",
+      "donations",
+      "transit"
+    ],
+    "confidence_score": 85,
+    "source_type": "tourism_board (estimated)"
+  },
+  {
+    "event_name": "Hemkund Sahib Yatra Opening (Expected)",
+    "event_type": "religious",
+    "start_date": "2026-05-25",
+    "end_date": "2026-10-10",
+    "state": "Uttarakhand",
+    "city_or_region": "Hemkund Sahib",
+    "primary_crowd_type": "pilgrims",
+    "likely_spend_categories": [
+      "travel",
+      "hotels",
+      "food",
+      "donations",
+      "transit"
+    ],
+    "confidence_score": 85,
+    "source_type": "religious_authority (estimated)"
+  },
+  {
+    "event_name": "School Summer Vacations (Phase 1)",
+    "event_type": "seasonal",
+    "start_date": "2026-05-01",
+    "end_date": "2026-06-15",
+    "state": "National",
+    "city_or_region": "Across India",
+    "primary_crowd_type": "students",
+    "likely_spend_categories": [
+      "travel",
+      "hotels",
+      "food",
+      "entertainment"
+    ],
+    "confidence_score": 90,
+    "source_type": "education_department (estimated)"
+  },
+  {
+    "event_name": "Mother's Day",
+    "event_type": "hallmark",
+    "start_date": "2026-05-10",
+    "end_date": "2026-05-10",
+    "state": "National",
+    "city_or_region": "Across India",
+    "primary_crowd_type": "families",
+    "likely_spend_categories": [
+      "shopping",
+      "food",
+      "entertainment"
+    ],
+    "confidence_score": 100,
+    "source_type": "civic"
+  },
+  {
+    "event_name": "Buddha Purnima",
+    "event_type": "religious",
+    "start_date": "2026-05-11",
+    "end_date": "2026-05-11",
+    "state": "National",
+    "city_or_region": "Across India (Buddhist community)",
+    "primary_crowd_type": "pilgrims",
+    "likely_spend_categories": [
+      "donations",
+      "food",
+      "travel"
+    ],
+    "confidence_score": 95,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Eid al-Adha (Expected)",
+    "event_type": "religious",
+    "start_date": "2026-06-14",
+    "end_date": "2026-06-14",
+    "state": "National",
+    "city_or_region": "Across India",
+    "primary_crowd_type": "families",
+    "likely_spend_categories": [
+      "food",
+      "donations",
+      "shopping"
+    ],
+    "confidence_score": 85,
+    "source_type": "religious_authority (moon sighting dependent)"
+  },
+  {
+    "event_name": "Father's Day",
+    "event_type": "hallmark",
+    "start_date": "2026-06-21",
+    "end_date": "2026-06-21",
+    "state": "National",
+    "city_or_region": "Across India",
+    "primary_crowd_type": "families",
+    "likely_spend_categories": [
+      "shopping",
+      "food",
+      "entertainment"
+    ],
+    "confidence_score": 100,
+    "source_type": "civic"
+  },
+  {
+    "event_name": "Jagannath Rath Yatra",
+    "event_type": "religious",
+    "start_date": "2026-06-25",
+    "end_date": "2026-07-03",
+    "state": "Odisha",
+    "city_or_region": "Puri",
+    "primary_crowd_type": "pilgrims",
+    "likely_spend_categories": [
+      "travel",
+      "hotels",
+      "food",
+      "donations",
+      "transit"
+    ],
+    "confidence_score": 90,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Amarnath Yatra Opening (Expected)",
+    "event_type": "religious",
+    "start_date": "2026-07-01",
+    "end_date": "2026-08-30",
+    "state": "Jammu & Kashmir",
+    "city_or_region": "Amarnath",
+    "primary_crowd_type": "pilgrims",
+    "likely_spend_categories": [
+      "travel",
+      "hotels",
+      "food",
+      "donations",
+      "transit"
+    ],
+    "confidence_score": 85,
+    "source_type": "tourism_board (estimated)"
+  },
+  {
+    "event_name": "Bakri Eid / Eid ul-Adha",
+    "event_type": "religious",
+    "start_date": "2026-07-06",
+    "end_date": "2026-07-06",
+    "state": "National",
+    "city_or_region": "Across India",
+    "primary_crowd_type": "families",
+    "likely_spend_categories": [
+      "food",
+      "donations",
+      "shopping",
+      "travel"
+    ],
+    "confidence_score": 85,
+    "source_type": "religious_authority (moon sighting dependent)"
+  },
+  {
+    "event_name": "Guru Purnima",
+    "event_type": "religious",
+    "start_date": "2026-07-09",
+    "end_date": "2026-07-09",
+    "state": "National",
+    "city_or_region": "Across India",
+    "primary_crowd_type": "devotees",
+    "likely_spend_categories": [
+      "donations",
+      "food"
+    ],
+    "confidence_score": 95,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Moharram",
+    "event_type": "religious",
+    "start_date": "2026-07-26",
+    "end_date": "2026-07-26",
+    "state": "National",
+    "city_or_region": "Across India",
+    "primary_crowd_type": "locals",
+    "likely_spend_categories": [
+      "food",
+      "donations",
+      "transit"
+    ],
+    "confidence_score": 85,
+    "source_type": "religious_authority (moon sighting dependent)"
+  },
+  {
+    "event_name": "Friendship Day",
+    "event_type": "hallmark",
+    "start_date": "2026-08-02",
+    "end_date": "2026-08-02",
+    "state": "National",
+    "city_or_region": "Across India",
+    "primary_crowd_type": "students",
+    "likely_spend_categories": [
+      "shopping",
+      "food",
+      "entertainment"
+    ],
+    "confidence_score": 100,
+    "source_type": "civic"
+  },
+  {
+    "event_name": "Raksha Bandhan",
+    "event_type": "religious",
+    "start_date": "2026-08-09",
+    "end_date": "2026-08-09",
+    "state": "National",
+    "city_or_region": "Across India",
+    "primary_crowd_type": "families",
+    "likely_spend_categories": [
+      "shopping",
+      "food",
+      "gifts"
+    ],
+    "confidence_score": 97,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Independence Day",
+    "event_type": "civic",
+    "start_date": "2026-08-15",
+    "end_date": "2026-08-15",
+    "state": "National",
+    "city_or_region": "Across India",
+    "primary_crowd_type": "families",
+    "likely_spend_categories": [
+      "food",
+      "entertainment"
+    ],
+    "confidence_score": 100,
+    "source_type": "government"
+  },
+  {
+    "event_name": "Janmashtami",
+    "event_type": "religious",
+    "start_date": "2026-08-16",
+    "end_date": "2026-08-16",
+    "state": "National",
+    "city_or_region": "Across India",
+    "primary_crowd_type": "families",
+    "likely_spend_categories": [
+      "donations",
+      "food",
+      "shopping"
+    ],
+    "confidence_score": 97,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Onam",
+    "event_type": "religious",
+    "start_date": "2026-08-25",
+    "end_date": "2026-09-04",
+    "state": "Kerala",
+    "city_or_region": "Across Kerala",
+    "primary_crowd_type": "locals",
+    "likely_spend_categories": [
+      "food",
+      "shopping",
+      "entertainment",
+      "travel"
+    ],
+    "confidence_score": 95,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Ganesh Chaturthi",
+    "event_type": "religious",
+    "start_date": "2026-09-12",
+    "end_date": "2026-09-21",
+    "state": "Maharashtra, Karnataka, Goa, Telangana",
+    "city_or_region": "Western & Southern India",
+    "primary_crowd_type": "locals",
+    "likely_spend_categories": [
+      "donations",
+      "food",
+      "shopping",
+      "entertainment"
+    ],
+    "confidence_score": 95,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Milad un-Nabi (Mawlid) (Expected)",
+    "event_type": "religious",
+    "start_date": "2026-09-24",
+    "end_date": "2026-09-24",
+    "state": "National",
+    "city_or_region": "Across India",
+    "primary_crowd_type": "families",
+    "likely_spend_categories": [
+      "food",
+      "donations"
+    ],
+    "confidence_score": 85,
+    "source_type": "religious_authority (moon sighting dependent)"
+  },
+  {
+    "event_name": "Gandhiji Jayanti",
+    "event_type": "civic",
+    "start_date": "2026-10-02",
+    "end_date": "2026-10-02",
+    "state": "National",
+    "city_or_region": "Across India",
+    "primary_crowd_type": "general",
+    "likely_spend_categories": [
+      "transit"
+    ],
+    "confidence_score": 100,
+    "source_type": "government"
+  },
+  {
+    "event_name": "Navratri",
+    "event_type": "religious",
+    "start_date": "2026-10-15",
+    "end_date": "2026-10-23",
+    "state": "National",
+    "city_or_region": "North, West, East India",
+    "primary_crowd_type": "families",
+    "likely_spend_categories": [
+      "donations",
+      "food",
+      "shopping",
+      "entertainment"
+    ],
+    "confidence_score": 95,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Durga Puja (Pujo Start)",
+    "event_type": "religious",
+    "start_date": "2026-10-19",
+    "end_date": "2026-10-23",
+    "state": "West Bengal, Assam, Tripura, Odisha",
+    "city_or_region": "Eastern India",
+    "primary_crowd_type": "locals",
+    "likely_spend_categories": [
+      "food",
+      "shopping",
+      "entertainment",
+      "travel"
+    ],
+    "confidence_score": 95,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Dussehra",
+    "event_type": "religious",
+    "start_date": "2026-10-23",
+    "end_date": "2026-10-23",
+    "state": "National",
+    "city_or_region": "North, West, East India",
+    "primary_crowd_type": "families",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "food"
+    ],
+    "confidence_score": 97,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Valmiki Jayanti",
+    "event_type": "religious",
+    "start_date": "2026-10-27",
+    "end_date": "2026-10-27",
+    "state": "National",
+    "city_or_region": "North India",
+    "primary_crowd_type": "locals",
+    "likely_spend_categories": [
+      "donations",
+      "food"
+    ],
+    "confidence_score": 95,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Karwa Chauth",
+    "event_type": "religious",
+    "start_date": "2026-10-28",
+    "end_date": "2026-10-28",
+    "state": "North India",
+    "city_or_region": "North India",
+    "primary_crowd_type": "families",
+    "likely_spend_categories": [
+      "shopping",
+      "food",
+      "gifts"
+    ],
+    "confidence_score": 95,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Karnataka Rajyotsava",
+    "event_type": "civic",
+    "start_date": "2026-11-01",
+    "end_date": "2026-11-01",
+    "state": "Karnataka",
+    "city_or_region": "Across Karnataka",
+    "primary_crowd_type": "locals",
+    "likely_spend_categories": [
+      "entertainment",
+      "food"
+    ],
+    "confidence_score": 98,
+    "source_type": "government"
+  },
+  {
+    "event_name": "Diwali (Dhanteras)",
+    "event_type": "religious",
+    "start_date": "2026-11-08",
+    "end_date": "2026-11-08",
+    "state": "National",
+    "city_or_region": "Across India",
+    "primary_crowd_type": "families",
+    "likely_spend_categories": [
+      "shopping",
+      "gold",
+      "food"
+    ],
+    "confidence_score": 97,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Diwali (Choti Diwali)",
+    "event_type": "religious",
+    "start_date": "2026-11-09",
+    "end_date": "2026-11-09",
+    "state": "National",
+    "city_or_region": "Across India",
+    "primary_crowd_type": "families",
+    "likely_spend_categories": [
+      "shopping",
+      "food",
+      "entertainment"
+    ],
+    "confidence_score": 97,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Diwali (Main Day)",
+    "event_type": "religious",
+    "start_date": "2026-11-10",
+    "end_date": "2026-11-10",
+    "state": "National",
+    "city_or_region": "Across India",
+    "primary_crowd_type": "families",
+    "likely_spend_categories": [
+      "shopping",
+      "food",
+      "gifts",
+      "entertainment",
+      "travel"
+    ],
+    "confidence_score": 98,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Govardhan Puja",
+    "event_type": "religious",
+    "start_date": "2026-11-11",
+    "end_date": "2026-11-11",
+    "state": "National",
+    "city_or_region": "North India",
+    "primary_crowd_type": "families",
+    "likely_spend_categories": [
+      "donations",
+      "food"
+    ],
+    "confidence_score": 95,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Bhai Dooj",
+    "event_type": "religious",
+    "start_date": "2026-11-12",
+    "end_date": "2026-11-12",
+    "state": "National",
+    "city_or_region": "North India",
+    "primary_crowd_type": "families",
+    "likely_spend_categories": [
+      "shopping",
+      "food",
+      "gifts"
+    ],
+    "confidence_score": 95,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Chhath Puja",
+    "event_type": "religious",
+    "start_date": "2026-11-14",
+    "end_date": "2026-11-17",
+    "state": "Bihar, Jharkhand, Uttar Pradesh",
+    "city_or_region": "Eastern India",
+    "primary_crowd_type": "locals",
+    "likely_spend_categories": [
+      "food",
+      "donations",
+      "travel",
+      "transit"
+    ],
+    "confidence_score": 95,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "Guru Nanak Jayanti",
+    "event_type": "religious",
+    "start_date": "2026-11-20",
+    "end_date": "2026-11-20",
+    "state": "National",
+    "city_or_region": "Across India (Sikh community)",
+    "primary_crowd_type": "pilgrims",
+    "likely_spend_categories": [
+      "donations",
+      "food",
+      "travel"
+    ],
+    "confidence_score": 95,
+    "source_type": "drikpanchang.com"
+  },
+  {
+    "event_name": "International Film Festival of India (IFFI)",
+    "event_type": "entertainment",
+    "start_date": "2026-11-20",
+    "end_date": "2026-11-28",
+    "state": "Goa",
+    "city_or_region": "Panaji",
+    "primary_crowd_type": "tourists",
+    "likely_spend_categories": [
+      "travel",
+      "hotels",
+      "food",
+      "entertainment"
+    ],
+    "confidence_score": 80,
+    "source_type": "government (estimated)"
+  },
+  {
+    "event_name": "Rann Utsav (Starts)",
+    "event_type": "tourism",
+    "start_date": "2026-11-25",
+    "end_date": "2027-02-28",
+    "state": "Gujarat",
+    "city_or_region": "Kutch",
+    "primary_crowd_type": "tourists",
+    "likely_spend_categories": [
+      "travel",
+      "hotels",
+      "food",
+      "shopping",
+      "entertainment"
+    ],
+    "confidence_score": 85,
+    "source_type": "tourism_board (estimated)"
+  },
+  {
+    "event_name": "Hornbill Festival",
+    "event_type": "tourism",
+    "start_date": "2026-12-01",
+    "end_date": "2026-12-10",
+    "state": "Nagaland",
+    "city_or_region": "Kisama Heritage Village",
+    "primary_crowd_type": "tourists",
+    "likely_spend_categories": [
+      "travel",
+      "hotels",
+      "food",
+      "shopping",
+      "entertainment"
+    ],
+    "confidence_score": 90,
+    "source_type": "tourism_board"
+  },
+  {
+    "event_name": "School Winter Vacations (Phase 1)",
+    "event_type": "seasonal",
+    "start_date": "2026-12-20",
+    "end_date": "2027-01-05",
+    "state": "National",
+    "city_or_region": "North India",
+    "primary_crowd_type": "students",
+    "likely_spend_categories": [
+      "travel",
+      "hotels",
+      "food",
+      "entertainment"
+    ],
+    "confidence_score": 90,
+    "source_type": "education_department (estimated)"
+  },
+  {
+    "event_name": "Christmas",
+    "event_type": "religious",
+    "start_date": "2026-12-25",
+    "end_date": "2026-12-25",
+    "state": "National",
+    "city_or_region": "Across India",
+    "primary_crowd_type": "families",
+    "likely_spend_categories": [
+      "shopping",
+      "food",
+      "entertainment"
+    ],
+    "confidence_score": 100,
+    "source_type": "government"
+  },
+  {
+    "event_name": "ICC Men's T20 World Cup 2026",
+    "event_type": "sports",
+    "start_date": "2026-02-01",
+    "end_date": "2026-03-08",
+    "state": "National",
+    "city_or_region": "Major metros (co-hosted with Sri Lanka)",
+    "primary_crowd_type": "tourists",
+    "likely_spend_categories": [
+      "travel",
+      "hotels",
+      "food",
+      "entertainment",
+      "shopping"
+    ],
+    "confidence_score": 85,
+    "source_type": "ICC (estimated window)"
+  },
+  {
+    "event_name": "Wedding Season (Peak 1)",
+    "event_type": "seasonal",
+    "start_date": "2026-01-15",
+    "end_date": "2026-03-10",
+    "state": "National",
+    "city_or_region": "Across India",
+    "primary_crowd_type": "families",
+    "likely_spend_categories": [
+      "shopping",
+      "travel",
+      "hotels",
+      "food",
+      "gifts"
+    ],
+    "confidence_score": 90,
+    "source_type": "cultural_tradition"
+  },
+  {
+    "event_name": "Wedding Season (Peak 2)",
+    "event_type": "seasonal",
+    "start_date": "2026-04-15",
+    "end_date": "2026-05-30",
+    "state": "National",
+    "city_or_region": "Across India",
+    "primary_crowd_type": "families",
+    "likely_spend_categories": [
+      "shopping",
+      "travel",
+      "hotels",
+      "food",
+      "gifts"
+    ],
+    "confidence_score": 90,
+    "source_type": "cultural_tradition"
+  },
+  {
+    "event_name": "Wedding Season (Peak 3)",
+    "event_type": "seasonal",
+    "start_date": "2026-11-10",
+    "end_date": "2026-12-15",
+    "state": "National",
+    "city_or_region": "Across India",
+    "primary_crowd_type": "families",
+    "likely_spend_categories": [
+      "shopping",
+      "travel",
+      "hotels",
+      "food",
+      "gifts"
+    ],
+    "confidence_score": 90,
+    "source_type": "cultural_tradition"
+  },
+  {
+    "event_name": "Shopping Festival (End of Reason Sale / Winter Sale)",
+    "event_type": "shopping",
+    "start_date": "2026-01-01",
+    "end_date": "2026-01-20",
+    "state": "National",
+    "city_or_region": "Online/Offline",
+    "primary_crowd_type": "families",
+    "likely_spend_categories": [
+      "shopping"
+    ],
+    "confidence_score": 90,
+    "source_type": "e-commerce_platforms (estimated)"
+  },
+  {
+    "event_name": "Shopping Festival (Festive Season Sales)",
+    "event_type": "shopping",
+    "start_date": "2026-10-01",
+    "end_date": "2026-11-15",
+    "state": "National",
+    "city_or_region": "Online/Offline",
+    "primary_crowd_type": "families",
+    "likely_spend_categories": [
+      "shopping"
+    ],
+    "confidence_score": 90,
+    "source_type": "e-commerce_platforms (estimated)"
+  }
+]

@@ -1,0 +1,3726 @@
+[
+  {
+    "event_name": "Reward Points",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-12-17",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Movie Tickets",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-12-04",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Fuel Surcharge Waiver",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-09-23",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Zomato Gold Membership",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-13",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Extra Reward Points",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-11-05",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Reward Points",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-23",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "International Lounge Access",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-22",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Fuel Surcharge Waiver",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-12-17",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "EatSure",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-11-14",
+    "end_date": "2026-02-18",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Surcharge Waiver",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-12-17",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Interactive Credit Card",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-11-19",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Entertainment Offers",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-22",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Maharaja Points",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-22",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "UPI Credit Card",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-06",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Cashback",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-03",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Fuel Surcharge Waiver",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-13",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Air Accident Insurance",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-03",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "International Events",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-04",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Fuel Surcharge Waiver",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-09-23",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Insurance Benefits",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-09-23",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Entertainment Benefit",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-12-26",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Domestic Lounge Access",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-09-27",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Golf Games & Lessons",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-09-27",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Movie Tickets",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-09-27",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "International Lounge Access",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-09-27",
+    "end_date": "2040-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "BookMyShow Offer",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-12-26",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Iconia Auto Assist",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-06",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Insurance Benefits",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-20",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Concierge Services",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-20",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Weekday Spends Rewards",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-14",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Tablet Plus Membership",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-13",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Reward Points",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-12-26",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Golf Games & Lessons",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-07",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Reward Points",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-23",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Fuel Surcharge Waiver",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-09-23",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Home Plan",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-11-05",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Domestic Lounge Access",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-13",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Earn Reward Points",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-13",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Golf Games & Lessons",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-13",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Fuel Surcharge Waiver",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-13",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Concierge Services",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-13",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Home Plan",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-09-28",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Domestic Lounge Access",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-09-28",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Domestic Lounge Access",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-09-25",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Dining Discount",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-09-30",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Movie Tickets",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-09-29",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Spend Milestone Avios",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-05",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "International Events",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-04",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Avios on Spends",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-01",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Domestic Lounge Access",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-22",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Credit Card on UPI",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-11-11",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Domestic Lounge Access",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-09-25",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Online Travel Spends",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-12-04",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Dining Voucher",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-23",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Golf Games & Lessons",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-12-04",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Gold Inlay",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-10",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Unique Rewards Benefit",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-13",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Reward Points on All Spends",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-09-23",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Early Payment Cashback",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-13",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Reward Points",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-23",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Reward Points on All Spends",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-09-23",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Insurance Benefits",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-10",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Dining Voucher",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-23",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Online Reward Points",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-12-04",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Reward Points on All Spends",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-07",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Loyalty Bonus Rewards Program",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-13",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Shop Plan",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-11-05",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Party Plan",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-11-05",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Fuel Surcharge Waiver",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-11-16",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Vistara Gold Membership",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-01",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Business Class Ticket Voucher",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-01",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "ITC Culinaire",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-09-27",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Lounge Access",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-12-26",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Reward Points",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-12-26",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Fuel Surcharge Waiver",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-20",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Golf Games & Lessons",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-06",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "International Spends Reward Points",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-23",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Fuel Surcharge Waiver",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-12-26",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Gold Inlay",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-10",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Dining Voucher",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-23",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Prime Membership Renewal",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-06",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Reward Points on All Spends",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-09-23",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Fuel Surcharge Waiver",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-09-23",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Party Plan",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-11-05",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Travel Plan",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-11-05",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Low Foreign Currency Mark-up Fee",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-13",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "BookMyShow Offer",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-13",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Shop Plan",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-09-28",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Party Plan",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-09-28",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Online Reward Points",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-09-28",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Golf Games & Lessons",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-09-28",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "POS Spends",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-09-28",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Meet and Greet",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-04",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "International Lounge Access",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-22",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Reward Points on Domestic Spends",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-22",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Non UPI Rewards",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-01-20",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Insurance Benefits",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-01-20",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Movie Tickets",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-09-25",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "UPI Spends",
+    "event_type": "marketing_campaign",
+    "start_date": "2026-01-22",
+    "end_date": "2026-01-29",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Cashback",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-12-17",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Fuel Surcharge Waiver",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-13",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Domestic Lounge Access",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-22",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "International Lounge Access",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-12-04",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Weekend Rewards",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-10-16",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Travel Plan",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-11-05",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Entertainment Benefit",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-12-17",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Entertainment Benefit",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-13",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Golf",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-09-25",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Home Plan",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-11-05",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Golf Games & Lessons",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-10",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "EMI Benefit",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-12-17",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Fuel Surcharge Waiver",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-09-23",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Insurance Benefits",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-09-23",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Book My Show",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-11-16",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Priority Pass",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-01",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Domestic Lounge Access",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-01",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Movie Ticket",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-03",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Welcome Gift",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-12-17",
+    "end_date": "2025-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Shop Plan",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-12-26",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Party Plan",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-12-26",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Spend Milestone Avios",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-05",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Domestic Lounge Access",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-03",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Meet and Greet",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-04",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Reward Points on All Spends",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-09-23",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Iconia Assurance",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-12-26",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Fuel Surcharge Waiver",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-12-26",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Book My Show",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-12-04",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Interactive Credit Card",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-12-04",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Domestic Lounge Access",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-14",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Pioneer Legacy Auto Assist",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-20",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Domestic Spends Reward Points",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-23",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Domestic Lounge Access",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-23",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "International Lounge Access",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-06",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "EazyDiner Membership",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-23",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Iconia Auto Assist",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-03",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "BookMyShow Offer",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-12-26",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Concierge Services",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-12-26",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "International Lounge Access",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-07",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Bonus Reward Points",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-12-03",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Insurance Benefits",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-09-23",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Shop Plan",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-11-05",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "International Lounge Access",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-13",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Travel Plan",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-09-28",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Online Travel Spends",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-11-01",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "International Lounge Access",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-09-28",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Movie Tickets",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-09-28",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Flight Discount",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-01",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Domestic Lounge Access",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-03",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Gold Membership",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-01",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Reward Points on International Spends",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-22",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Entertainment Benefit",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-22",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Movie Tickets",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-10-16",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Domestic Lounge Access",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-10-16",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Weekend Rewards",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-10-16",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "UPI Reward Points",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-01-20",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Weekend Rewards",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-09-25",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Reward Points",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-13",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "POS Spends",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-12-04",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Fuel Surcharge Waiver",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-07",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Gold Inlay",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-09-25",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Entertainment Benefit",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-22",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Domestic Lounge Access",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-12-04",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Entertainment Benefit",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-13",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "International Lounge Access",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-09-26",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "International Lounge Access",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-10",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Insurance Benefits",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-09-23",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Surcharge Waiver",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-03",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Domestic Lounge Access",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-12-31",
+    "end_date": "2026-08-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Travel Plan",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-12-26",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Extra Reward Points",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-12-26",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Home Plan",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-12-26",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "International Lounge Access",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-03",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "First of its kind Card",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-12-26",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Fuel Surcharge Waiver",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-12-26",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "International Spends Reward Points",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-09-27",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Dining Discount",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-09-27",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Domestic Spends Reward Points",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-11-18",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Concierge Services",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-12-26",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Fuel Surcharge Waiver",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-12-04",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Weekend Spends Rewards",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-14",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "International Lounge Access",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-14",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Golf Games & Lessons",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-20",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Discounted Foreign Currency Mark-up Fee",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-14",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Book My Show offer",
+    "event_type": "marketing_campaign",
+    "start_date": "2025-01-14",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Iconia Assurance",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-12-26",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Dining Discount",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-12-03",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "EazyDiner Prime Membership",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-12-03",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Reward Points on All Spends",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-09-23",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Insurance Benefits",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-09-23",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Extra Reward Points",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-11-05",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Extra Reward Points",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-09-27",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Reward Points",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-09-29",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Complimentary Beverage",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-09-25",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "International Lounge Access",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-03",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Air Accident Insurance",
+    "event_type": "marketing_campaign",
+    "start_date": "2023-10-03",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  },
+  {
+    "event_name": "Fuel Surcharge Waiver",
+    "event_type": "marketing_campaign",
+    "start_date": "2024-01-20",
+    "end_date": "2050-12-31",
+    "state": "National",
+    "city_or_region": "National",
+    "primary_crowd_type": "Credit Card Holders",
+    "likely_spend_categories": [
+      "shopping",
+      "entertainment",
+      "travel",
+      "food",
+      "bill_payments",
+      "rewards_redemption"
+    ],
+    "confidence_score": 100,
+    "source_type": "Internal Campaign Data"
+  }
+]

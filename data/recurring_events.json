@@ -1,0 +1,189 @@
+[
+  {
+    "event_name": "Salary Window Jan",
+    "event_type": "financial_cycle",
+    "start_date": "2026-01-28",
+    "end_date": "2026-02-05",
+    "impact_on_transactions": "higher",
+    "details": "Period around monthly salary disbursement and initial spending",
+    "likely_spend_categories": ["bill_payments", "shopping", "food", "entertainment"],
+    "confidence_score": 100,
+    "source_type": "customary"
+  },
+  {
+    "event_name": "Salary Window Feb",
+    "event_type": "financial_cycle",
+    "start_date": "2026-02-28",
+    "end_date": "2026-03-05",
+    "impact_on_transactions": "higher",
+    "details": "Period around monthly salary disbursement and initial spending",
+    "likely_spend_categories": ["bill_payments", "shopping", "food", "entertainment"],
+    "confidence_score": 100,
+    "source_type": "customary"
+  },
+  {
+    "event_name": "Salary Window Mar",
+    "event_type": "financial_cycle",
+    "start_date": "2026-03-28",
+    "end_date": "2026-04-05",
+    "impact_on_transactions": "higher",
+    "details": "Period around monthly salary disbursement and initial spending",
+    "likely_spend_categories": ["bill_payments", "shopping", "food", "entertainment"],
+    "confidence_score": 100,
+    "source_type": "customary"
+  },
+  {
+    "event_name": "Salary Window Apr",
+    "event_type": "financial_cycle",
+    "start_date": "2026-04-28",
+    "end_date": "2026-05-05",
+    "impact_on_transactions": "higher",
+    "details": "Period around monthly salary disbursement and initial spending",
+    "likely_spend_categories": ["bill_payments", "shopping", "food", "entertainment"],
+    "confidence_score": 100,
+    "source_type": "customary"
+  },
+  {
+    "event_name": "Salary Window May",
+    "event_type": "financial_cycle",
+    "start_date": "2026-05-28",
+    "end_date": "2026-06-05",
+    "impact_on_transactions": "higher",
+    "details": "Period around monthly salary disbursement and initial spending",
+    "likely_spend_categories": ["bill_payments", "shopping", "food", "entertainment"],
+    "confidence_score": 100,
+    "source_type": "customary"
+  },
+  {
+    "event_name": "Salary Window Jun",
+    "event_type": "financial_cycle",
+    "start_date": "2026-06-28",
+    "end_date": "2026-07-05",
+    "impact_on_transactions": "higher",
+    "details": "Period around monthly salary disbursement and initial spending",
+    "likely_spend_categories": ["bill_payments", "shopping", "food", "entertainment"],
+    "confidence_score": 100,
+    "source_type": "customary"
+  },
+  {
+    "event_name": "Salary Window Jul",
+    "event_type": "financial_cycle",
+    "start_date": "2026-07-28",
+    "end_date": "2026-08-05",
+    "impact_on_transactions": "higher",
+    "details": "Period around monthly salary disbursement and initial spending",
+    "likely_spend_categories": ["bill_payments", "shopping", "food", "entertainment"],
+    "confidence_score": 100,
+    "source_type": "customary"
+  },
+  {
+    "event_name": "Salary Window Aug",
+    "event_type": "financial_cycle",
+    "start_date": "2026-08-28",
+    "end_date": "2026-09-05",
+    "impact_on_transactions": "higher",
+    "details": "Period around monthly salary disbursement and initial spending",
+    "likely_spend_categories": ["bill_payments", "shopping", "food", "entertainment"],
+    "confidence_score": 100,
+    "source_type": "customary"
+  },
+  {
+    "event_name": "Salary Window Sep",
+    "event_type": "financial_cycle",
+    "start_date": "2026-09-28",
+    "end_date": "2026-10-05",
+    "impact_on_transactions": "higher",
+    "details": "Period around monthly salary disbursement and initial spending",
+    "likely_spend_categories": ["bill_payments", "shopping", "food", "entertainment"],
+    "confidence_score": 100,
+    "source_type": "customary"
+  },
+  {
+    "event_name": "Salary Window Oct",
+    "event_type": "financial_cycle",
+    "start_date": "2026-10-28",
+    "end_date": "2026-11-05",
+    "impact_on_transactions": "higher",
+    "details": "Period around monthly salary disbursement and initial spending",
+    "likely_spend_categories": ["bill_payments", "shopping", "food", "entertainment"],
+    "confidence_score": 100,
+    "source_type": "customary"
+  },
+  {
+    "event_name": "Salary Window Nov",
+    "event_type": "financial_cycle",
+    "start_date": "2026-11-28",
+    "end_date": "2026-12-05",
+    "impact_on_transactions": "higher",
+    "details": "Period around monthly salary disbursement and initial spending",
+    "likely_spend_categories": ["bill_payments", "shopping", "food", "entertainment"],
+    "confidence_score": 100,
+    "source_type": "customary"
+  },
+  {
+    "event_name": "Salary Window Dec",
+    "event_type": "financial_cycle",
+    "start_date": "2026-12-28",
+    "end_date": "2027-01-05",
+    "impact_on_transactions": "higher",
+    "details": "Period around monthly salary disbursement and initial spending",
+    "likely_spend_categories": ["bill_payments", "shopping", "food", "entertainment"],
+    "confidence_score": 100,
+    "source_type": "customary"
+  },
+  {
+    "event_name": "Income Tax Filing Window (Individuals)",
+    "event_type": "financial_deadline",
+    "start_date": "2026-06-01",
+    "end_date": "2026-07-31",
+    "impact_on_transactions": "lower",
+    "details": "Individuals file income tax returns, potentially leading to lower discretionary spending due to tax outflows.",
+    "likely_spend_categories": ["tax_payments", "financial_services"],
+    "confidence_score": 100,
+    "source_type": "government_tax_authority"
+  },
+  {
+    "event_name": "Income Tax Filing Window (Businesses/Audited Cases)",
+    "event_type": "financial_deadline",
+    "start_date": "2026-09-01",
+    "end_date": "2026-10-31",
+    "impact_on_transactions": "lower",
+    "details": "Businesses and audited cases file income tax returns, leading to cash outflows which can indirectly impact consumer spending.",
+    "likely_spend_categories": ["tax_payments", "business_services"],
+    "confidence_score": 100,
+    "source_type": "government_tax_authority"
+  },
+  {
+    "event_name": "School Exam Season (Annual)",
+    "event_type": "educational_cycle",
+    "start_date": "2026-02-15",
+    "end_date": "2026-03-31",
+    "impact_on_transactions": "lower",
+    "details": "Annual school exams, leading to reduced family outings, entertainment, and travel; increased spending on education-related items.",
+    "likely_spend_categories": ["education", "stationary", "books"],
+    "confidence_score": 95,
+    "source_type": "educational_authority_general"
+  },
+  {
+    "event_name": "School Exam Season (Mid-Year)",
+    "event_type": "educational_cycle",
+    "start_date": "2026-08-15",
+    "end_date": "2026-09-30",
+    "impact_on_transactions": "lower",
+    "details": "Mid-year school exams, leading to reduced family outings, entertainment, and travel; increased spending on education-related items.",
+    "likely_spend_categories": ["education", "stationary", "books"],
+    "confidence_score": 95,
+    "source_type": "educational_authority_general"
+  },
+  {
+    "event_name": "School Summer Vacations",
+    "event_type": "educational_cycle",
+    "start_date": "2026-05-01",
+    "end_date": "2026-06-15",
+    "impact_on_transactions": "higher",
+    "details": "Extended school break, leading to increased family travel, entertainment, and discretionary spending.",
+    "likely_spend_categories": ["travel", "entertainment", "shopping", "food", "kids_products"],
+    "confidence_score": 95,
+    "source_type": "educational_authority_general"
+  }
+]
