@@ -1,3 +1,7 @@
+let hfChatStarted = false;
+let hfConversationId = null;
+let chatbotInitialized = false;
+
 const state = {
   currentMonth: new Date(),
   selectedDate: new Date(),
@@ -13,16 +17,57 @@ async function init() {
 
   renderCalendar(state.currentMonth);
   renderEvents(state.selectedDate);
-  // renderInsights();
+
+  setupChatUI();
 
   document.getElementById("prev-month-btn").onclick = () => changeMonth(-1);
   document.getElementById("next-month-btn").onclick = () => changeMonth(1);
+
   const refreshBtn = document.getElementById("refresh-insights-btn");
-if (refreshBtn) {
-  refreshBtn.onclick = () => renderInsights();
-}
+  if (refreshBtn) {
+    refreshBtn.onclick = () => renderInsights();
+  }
+
   document.getElementById("run-date-optimizer-btn").onclick = runDateOptimizerAgent;
   document.getElementById("run-campaign-ideas-btn").onclick = runCampaignIdeasAgent;
+}
+
+function setupChatUI() {
+  const fab = document.getElementById("ai-fab-btn");
+  const panel = document.getElementById("ai-chat-panel");
+  const closeBtn = document.getElementById("ai-chat-close");
+
+  if (!fab || !panel || !closeBtn) {
+    console.error("Chat UI elements not found");
+    return;
+  }
+
+  fab.onclick = () => {
+    const isHidden = panel.classList.contains("hidden");
+    panel.classList.toggle("hidden");
+
+    if (isHidden && !chatbotInitialized) {
+      appendChatMessage(
+        "assistant",
+        "Hi! I can answer questions about the current calendar and suggest improvements."
+      );
+      chatbotInitialized = true;
+    }
+  };
+
+  closeBtn.onclick = () => {
+    panel.classList.add("hidden");
+  };
+
+  document.getElementById("chatbot-send-btn").onclick = runCalendarChatbot;
+
+  document.getElementById("chatbot-input").addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      runCalendarChatbot();
+    }
+  });
+
+  document.getElementById("chatbot-new-chat-btn").onclick = startNewChatSession;
 }
 
 async function loadData() {
@@ -139,6 +184,37 @@ function buildCampaignIdeasPayload() {
       card_program: e.cardProgram,
       benefit_type: e.benefitType
     }))
+  };
+}
+
+function buildHFChatStartPayload(userMessage) {
+  return {
+    user_input: userMessage,
+    data: {
+      campaign_objective: "calendar planning support",
+      selected_date: formatISO(state.selectedDate),
+      month_context: {
+        year: state.currentMonth.getFullYear(),
+        month: state.currentMonth.getMonth() + 1
+      },
+      holidays: state.holidays.map(normalizeEvent).map(e => ({
+        event_name: e.name,
+        start_date: e.start,
+        end_date: e.end
+      })),
+      recurring_events: state.recurring.map(normalizeEvent).map(e => ({
+        event_name: e.name,
+        start_date: e.start,
+        end_date: e.end
+      })),
+      campaigns: state.campaigns.map(normalizeEvent).map(e => ({
+        event_name: e.name,
+        start_date: e.start,
+        end_date: e.end,
+        card_program: e.cardProgram,
+        benefit_type: e.benefitType
+      }))
+    }
   };
 }
 
@@ -293,8 +369,8 @@ async function runDateOptimizerAgent() {
   const statusEl = document.getElementById("date-optimizer-status");
   const resultEl = document.getElementById("date-optimizer-result");
 
-  statusEl.innerText = "Analyzing campaign timing...";
-  resultEl.innerHTML = `<div class="text-sm text-gray-500">Generating recommendation...</div>`;
+  statusEl.innerText = "Analyzing campaign timing";
+  resultEl.innerHTML = `<div class="text-sm text-gray-500"> </div>`;
 
   try {
     const payload = buildDateOptimizerPayload();
@@ -344,7 +420,7 @@ async function runCampaignIdeasAgent() {
   const resultEl = document.getElementById("campaign-ideas-result");
 
   statusEl.innerText = "Generating campaign ideas...";
-  resultEl.innerHTML = `<div class="text-sm text-gray-500">Thinking through ideas...</div>`;
+  resultEl.innerHTML = `<div class="text-sm text-gray-500"> </div>`;
 
   try {
     const payload = buildCampaignIdeasPayload();
@@ -385,6 +461,92 @@ async function runCampaignIdeasAgent() {
       </div>
     `;
   }
+}
+
+async function runCalendarChatbot() {
+  const inputEl = document.getElementById("chatbot-input");
+  const statusEl = document.getElementById("chatbot-status");
+  const messagesEl = document.getElementById("chatbot-messages");
+
+  const question = inputEl.value.trim();
+  if (!question) return;
+
+  appendChatMessage("user", question);
+  inputEl.value = "";
+  statusEl.innerText = "AI is thinking...";
+
+  try {
+    let response;
+    let data;
+
+    if (!hfChatStarted) {
+      const startPayload = buildHFChatStartPayload(question);
+
+      response = await fetch("http://localhost:3000/api/hf-chat/start", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(startPayload)
+      });
+
+      data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data?.error || "Failed to start conversation");
+      }
+
+      hfChatStarted = true;
+      hfConversationId =
+        data.conversation_id ||
+        data.conversationId ||
+        data.chat_id ||
+        data.chatId ||
+        null;
+
+      console.log("HF start response:", data);
+      console.log("Stored conversation_id:", hfConversationId);
+      console.log("Sending conversation_id:", hfConversationId);
+
+    } else {
+      response = await fetch("http://localhost:3000/api/hf-chat/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          user_input: question,
+          conversation_id: hfConversationId
+        })
+      });
+
+      data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data?.error || "Failed to continue conversation");
+      }
+
+      console.log("HF chat response:", data);
+    }
+
+    const answer =
+      data.answer ||
+      data.response ||
+      data.message ||
+      data.output ||
+      data.raw_output ||
+      "No answer returned.";
+
+    statusEl.innerText = "Ready";
+    appendChatMessage("assistant", String(answer));
+
+  } catch (error) {
+    console.error("Chatbot error:", error);
+    statusEl.innerText = "Failed";
+    appendChatMessage("assistant", `Error: ${error.message || "Chat request failed."}`);
+  }
+
+  messagesEl.scrollTop = messagesEl.scrollHeight;
 }
 
 function renderDateOptimizerResult(data) {
@@ -513,4 +675,67 @@ function escapeHtml(value) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#39;");
+}
+
+function buildChatbotPayload(userQuestion) {
+  return {
+    objective: "Calendar Copilot Chat",
+    user_question: userQuestion,
+    selected_date: formatISO(state.selectedDate),
+    month_context: {
+      year: state.currentMonth.getFullYear(),
+      month: state.currentMonth.getMonth() + 1
+    },
+    holidays: state.holidays.map(normalizeEvent).map(e => ({
+      event_name: e.name,
+      start_date: e.start,
+      end_date: e.end
+    })),
+    recurring_events: state.recurring.map(normalizeEvent).map(e => ({
+      event_name: e.name,
+      start_date: e.start,
+      end_date: e.end
+    })),
+    campaigns: state.campaigns.map(normalizeEvent).map(e => ({
+      event_name: e.name,
+      start_date: e.start,
+      end_date: e.end,
+      card_program: e.cardProgram,
+      benefit_type: e.benefitType
+    }))
+  };
+}
+
+function appendChatMessage(role, text) {
+  const messagesEl = document.getElementById("chatbot-messages");
+
+  const bubble = document.createElement("div");
+  bubble.className =
+    role === "user"
+      ? "ml-auto max-w-[85%] rounded-2xl bg-blue-600 text-white px-4 py-3 text-sm"
+      : "mr-auto max-w-[85%] rounded-2xl bg-white border border-gray-200 text-gray-800 px-4 py-3 text-sm";
+
+  bubble.textContent = text;
+  messagesEl.appendChild(bubble);
+}
+
+function startNewChatSession() {
+  hfChatStarted = false;
+  hfConversationId = null;
+
+  const messagesEl = document.getElementById("chatbot-messages");
+  const statusEl = document.getElementById("chatbot-status");
+
+  messagesEl.innerHTML = `
+    <div class="text-sm text-gray-500">
+      New chat started. Ask me anything about campaigns, timing, or planning.
+    </div>
+  `;
+
+  statusEl.innerText = "Ready";
+
+  appendChatMessage(
+    "assistant",
+    "Started a fresh chat. What would you like to know?"
+  );
 }

@@ -26,145 +26,162 @@
 
     <!-- Main -->
     <main class="flex-1 min-w-0 p-6 overflow-y-auto">
+  <div class="mb-6">
+    <h1 class="text-2xl font-bold">AI Strategy Copilot</h1>
+  </div>
 
-      <div class="mb-6">
-        <h1 class="text-2xl font-bold">AI Strategy Copilot</h1>
-      </div>
+  <div class="grid grid-cols-1 xl:grid-cols-3 gap-6 h-[calc(100vh-120px)]">
+    <!-- Left Panel -->
+    <section class="bg-white rounded-xl shadow min-h-0 overflow-hidden xl:col-span-1">
+      <div class="h-full flex flex-col">
+        <div class="p-4 border-b">
+          <div class="flex justify-between items-center mb-4">
+            <button id="prev-month-btn" type="button" class="px-2 py-1 rounded hover:bg-gray-100">◀</button>
+            <h3 id="calendar-month-label" class="font-semibold text-lg"></h3>
+            <button id="next-month-btn" type="button" class="px-2 py-1 rounded hover:bg-gray-100">▶</button>
+          </div>
 
-      <div class="grid grid-cols-1 xl:grid-cols-3 gap-6 h-[calc(100vh-120px)]">
+          <div class="grid grid-cols-7 gap-2 text-xs font-semibold text-gray-500 mb-2">
+            <div class="text-center">Sun</div>
+            <div class="text-center">Mon</div>
+            <div class="text-center">Tue</div>
+            <div class="text-center">Wed</div>
+            <div class="text-center">Thu</div>
+            <div class="text-center">Fri</div>
+            <div class="text-center">Sat</div>
+          </div>
 
-        <!-- Left Panel -->
-        <section class="bg-white rounded-xl shadow min-h-0 overflow-hidden xl:col-span-1">
-          <div class="h-full flex flex-col">
-            <div class="p-4 border-b">
-              <div class="flex justify-between items-center mb-4">
-                <button id="prev-month-btn" type="button" class="px-2 py-1 rounded hover:bg-gray-100">◀</button>
-                <h3 id="calendar-month-label" class="font-semibold text-lg"></h3>
-                <button id="next-month-btn" type="button" class="px-2 py-1 rounded hover:bg-gray-100">▶</button>
+          <div id="calendar-grid" class="grid grid-cols-7 gap-2"></div>
+        </div>
+
+        <div class="flex-1 overflow-y-auto p-4">
+          <h3 id="selected-date-label" class="font-semibold text-base mb-4"></h3>
+
+          <div class="space-y-6">
+            <div>
+              <div class="flex items-baseline justify-between mb-2">
+                <h4 class="font-semibold">Holidays</h4>
+                <span id="holiday-count" class="text-sm text-gray-500">0 events</span>
               </div>
-
-              <div class="grid grid-cols-7 gap-2 text-xs font-semibold text-gray-500 mb-2">
-                <div class="text-center">Sun</div>
-                <div class="text-center">Mon</div>
-                <div class="text-center">Tue</div>
-                <div class="text-center">Wed</div>
-                <div class="text-center">Thu</div>
-                <div class="text-center">Fri</div>
-                <div class="text-center">Sat</div>
-              </div>
-
-              <div id="calendar-grid" class="grid grid-cols-7 gap-2"></div>
+              <div id="holiday-list" class="space-y-2"></div>
             </div>
 
-            <div class="flex-1 overflow-y-auto p-4">
-              <h3 id="selected-date-label" class="font-semibold text-base mb-4"></h3>
-
-              <div class="space-y-6">
-                <div>
-                  <div class="flex items-baseline justify-between mb-2">
-                    <h4 class="font-semibold">Holidays</h4>
-                    <span id="holiday-count" class="text-sm text-gray-500">0 events</span>
-                  </div>
-                  <div id="holiday-list" class="space-y-2"></div>
-                </div>
-
-                <div>
-                  <div class="flex items-baseline justify-between mb-2">
-                    <h4 class="font-semibold">Recurring Events</h4>
-                    <span id="recurring-count" class="text-sm text-gray-500">0 events</span>
-                  </div>
-                  <div id="recurring-list" class="space-y-2"></div>
-                </div>
-
-                <div>
-                  <div class="flex items-baseline justify-between mb-2">
-                    <h4 class="font-semibold">Campaigns</h4>
-                    <span id="campaign-count" class="text-sm text-gray-500">0 events</span>
-                  </div>
-                  <div id="campaign-list" class="space-y-2"></div>
-                </div>
+            <div>
+              <div class="flex items-baseline justify-between mb-2">
+                <h4 class="font-semibold">Recurring Events</h4>
+                <span id="recurring-count" class="text-sm text-gray-500">0 events</span>
               </div>
+              <div id="recurring-list" class="space-y-2"></div>
+            </div>
+
+            <div>
+              <div class="flex items-baseline justify-between mb-2">
+                <h4 class="font-semibold">Campaigns</h4>
+                <span id="campaign-count" class="text-sm text-gray-500">0 events</span>
+              </div>
+              <div id="campaign-list" class="space-y-2"></div>
             </div>
           </div>
-        </section>
-
-        <!-- Right Panel -->
-        <section class="bg-white rounded-xl shadow min-h-0 overflow-hidden xl:col-span-2">
-          <div class="h-full flex flex-col">
-            <div class="p-6 border-b">
-              <h2 class="text-lg font-semibold">AI Insights</h2>
-          </div>
-
-        <div id="insights-list" class="flex-1 overflow-y-auto p-6 space-y-6">
-
-      <!-- Card 1: Optimize dates -->
-      <div class="p-5 border border-gray-200 rounded-2xl bg-white shadow-sm">
-        <div class="flex items-start justify-between gap-4 mb-3">
-          <div>
-            <h3 class="font-semibold text-lg">Optimize campaign dates for peak user engagement</h3>
-            <p class="text-sm text-gray-500">
-              Uses holidays, recurring events, and campaign schedules to recommend better timing.
-            </p>
-          </div>
-
-          <button
-            id="run-date-optimizer-btn"
-            type="button"
-            class="bg-blue-600 text-white px-4 py-2 rounded-lg"
-          >
-            Run Agent
-          </button>
         </div>
-
-        <div id="date-optimizer-status" class="text-sm text-gray-500 mb-3"></div>
-
-        <div id="date-optimizer-result" class="space-y-3">
-          <div class="text-sm text-gray-500">
-            No result yet.
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2: Generate campaign ideas -->
-      <div class="p-5 border border-gray-200 rounded-2xl bg-white shadow-sm">
-        <div class="flex items-start justify-between gap-4 mb-3">
-          <div>
-            <h3 class="font-semibold text-lg">Generate high impact campaign ideas</h3>
-            <p class="text-sm text-gray-500">
-              Suggests new campaign concepts based on holidays, recurring events, seasonal moments, and active campaigns.
-            </p>
-          </div>
-
-          <button
-            id="run-campaign-ideas-btn"
-            type="button"
-            class="bg-blue-600 text-white px-4 py-2 rounded-lg"
-          >
-            Run Agent
-          </button>
-        </div>
-
-        <div id="campaign-ideas-status" class="text-sm text-gray-500 mb-3"></div>
-
-        <div id="campaign-ideas-result" class="space-y-3">
-          <div class="text-sm text-gray-500">
-            No ideas generated yet.
-          </div>
-        </div>
-      </div>
-
-        </div>
-        </div>
-        </section>
-
-            </div>
       </div>
     </section>
 
+    <!-- Right Panel -->
+    <section class="bg-white rounded-xl shadow min-h-0 overflow-hidden xl:col-span-2">
+      <div class="h-full flex flex-col">
+        <div class="p-6 border-b">
+          <h2 class="text-lg font-semibold">AI Insights</h2>
+        </div>
+
+        <div id="insights-list" class="flex-1 overflow-y-auto p-6 space-y-6">
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white shadow-sm">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="font-semibold text-lg">Optimize campaign dates for peak user engagement</h3>
+                <p class="text-sm text-gray-500">
+                  Uses holidays, recurring events, and campaign schedules to recommend better timing.
+                </p>
+              </div>
+
+              <button
+                id="run-date-optimizer-btn"
+                type="button"
+                class="bg-blue-600 text-white px-4 py-2 rounded-lg"
+              >
+                Run Agent
+              </button>
+            </div>
+
+            <div id="date-optimizer-status" class="text-sm text-gray-500 mb-3"></div>
+
+            <div id="date-optimizer-result" class="space-y-3">
+              <div class="text-sm text-gray-500">No result yet.</div>
+            </div>
+          </div>
+
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white shadow-sm">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="font-semibold text-lg">Generate high impact campaign ideas</h3>
+                <p class="text-sm text-gray-500">
+                  Suggests new campaign concepts based on holidays, recurring events, seasonal moments, and active campaigns.
+                </p>
+              </div>
+
+              <button
+                id="run-campaign-ideas-btn"
+                type="button"
+                class="bg-blue-600 text-white px-4 py-2 rounded-lg"
+              >
+                Run Agent
+              </button>
+            </div>
+
+            <div id="campaign-ideas-status" class="text-sm text-gray-500 mb-3"></div>
+
+            <div id="campaign-ideas-result" class="space-y-3">
+              <div class="text-sm text-gray-500">No ideas generated yet.</div>
+            </div>
+          </div>
+        </div>
       </div>
-    </main>
+    </section>
+  </div>
+</main>
   </div>
 
   <script src="app.js"></script>
+
+<!-- FLOATING AI CHATBOT -->
+
+<button id="ai-fab-btn" class="ai-fab">
+  <span class="ai-fab-icon">💡</span>
+</button>
+
+<div id="ai-chat-panel" class="ai-chat-panel hidden">
+  
+  <div class="ai-chat-header">
+    <span>Campaign Assistant</span>
+    <div class="ai-chat-header-actions">
+      <button id="chatbot-new-chat-btn" type="button">Start new chat</button>
+      <button id="ai-chat-close" type="button">✕</button>
+    </div>
+  </div>
+
+  <div id="chatbot-messages" class="ai-chat-messages">
+  </div>
+
+  <div class="ai-chat-input">
+    <input
+      id="chatbot-input"
+      type="text"
+      placeholder="Ask something..."
+    />
+    <button id="chatbot-send-btn" type="button">➤</button>
+  </div>
+
+  <div id="chatbot-status" class="ai-chat-status"></div>
+</div>
+
 </body>
 </html>

@@ -14,6 +14,9 @@ Data Source: You will be provided with a Holiday Calendar containing:
 2) Recurring Events in 'recurring_events.json' (e.g., Advance Tax deadlines, ITR filing windows, FY-end).
 3) Planned Marketing Campaigns (with their current start and end dates) in 'campaigns.json'.
 
+VERY IMPORTANT:
+1. IGNORE ALL EVENTS IN CAMPAIGNS.JSON WITH "end_date": "2050-12-31". ONLY FOCUS ON CAMPAIGNS FOR THE CURRENT CALENDAR YEAR.
+
 1. Timing & Category Synergy Logic
 a) You must time the offer based on the nature of the merchant_category the campaign is targeting.:
 b) High-Intent Lead Time: For "High Ticket/Planning" categories (Travel, Electronics, Jewelry), start the campaign 7–15 days before the peak event/holiday.
@@ -73,6 +76,9 @@ Goals:
 5. Provide Seasonal Fit rationale about why these merchant categories are relevant for the selected dates (e.g., "Higher Travel spend observed in historical April data due to upcoming Summer holidays").
 6. Give the target audience group for this campaign (e.g., "Millennial Foodies in Tier 1 cities").
 
+VERY IMPORTANT:
+1. IGNORE ALL EVENTS IN CAMPAIGNS.JSON WITH "end_date": "2050-12-31". ONLY GIVE CREATIVE SUGGESTIONS FOR THE CURRENT CALENDAR YEAR.
+
 Constraints & Guardrails
 Benefit Restriction: Do NOT suggest benefits outside of the provided monthly catalog.
 Provide suggestions only for the CURRENT MONTH.
@@ -88,13 +94,33 @@ Expected Output should be in a structured JSON format as shown below:
       "title": "string",
       "concept": "string",
       "targetAudience": "string",
-      "channels": ["string"],
-      "whyItWillWork": "string"
       "merchantCategories": ["string"],
       "spendThreshold": "string",
+      "whyItWillWork": "string",
       "strategicRationale": "string",
       "seasonalFit": "string"
     }
   ]
 }
 `;
+
+// export const calendarChatbotPrompt = (inputData) => `
+// You are a smart campaign calendar copilot.
+
+// Your job:
+// - Answer the user's question using the current calendar data first.
+// - If the question asks for suggestions, provide practical planning recommendations.
+// - If outside knowledge would help, you may use general current-world context if available from the system calling you.
+// - Be concise, specific, and useful.
+// - Focus on campaign timing, overlaps, holidays, recurring events, and planning opportunities.
+// - If the answer depends only on provided data, say so confidently.
+// - If the answer would benefit from external context, clearly label that part as broader suggestion.
+
+// Input data:
+// ${JSON.stringify(inputData, null, 2)}
+
+// Return strict JSON only:
+// {
+//   "answer": "string"
+// }
+// `;
