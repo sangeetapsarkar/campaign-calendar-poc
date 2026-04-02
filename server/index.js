@@ -22,16 +22,13 @@ import {
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// ✅ Load .env from project root
+// If your .env sits beside this file, keep this.
+// If your .env later moves to project root, change this path accordingly.
 dotenv.config({ path: path.join(__dirname, ".env") });
 
 const app = express();
 app.use(cors());
 app.use(express.json({ limit: "2mb" }));
-
-// =========================
-// UTIL FUNCTIONS
-// =========================
 
 function estimateTokens(text) {
   if (!text) return 0;
@@ -39,10 +36,23 @@ function estimateTokens(text) {
 }
 
 function safeJsonParse(text) {
+  if (!text || typeof text !== "string") return null;
+
   try {
     return JSON.parse(text);
   } catch {
-    return null;
+    // Try to recover JSON wrapped in markdown fences
+    const cleaned = text
+      .replace(/^```json\s*/i, "")
+      .replace(/^```\s*/i, "")
+      .replace(/\s*```$/i, "")
+      .trim();
+
+    try {
+      return JSON.parse(cleaned);
+    } catch {
+      return null;
+    }
   }
 }
 
@@ -99,9 +109,27 @@ async function loadCalendarData() {
   };
 }
 
-// =========================
-// HEALTH CHECK
-// =========================
+function normalizeOptimizerResponse(parsed, rawText) {
+  if (parsed && Array.isArray(parsed.recommendations)) {
+    return parsed;
+  }
+
+  return {
+    recommendations: [],
+    raw_output: rawText || "",
+  };
+}
+
+function normalizeCampaignIdeasResponse(parsed, rawText) {
+  if (parsed && Array.isArray(parsed.campaignIdeas)) {
+    return parsed;
+  }
+
+  return {
+    campaignIdeas: [],
+    raw_output: rawText || "",
+  };
+}
 
 app.get("/", (req, res) => {
   res.send("Backend is running");
@@ -137,17 +165,9 @@ app.get("/health", async (req, res) => {
   res.json(checks);
 });
 
-// =========================
-// GEMINI CONFIG
-// =========================
-
 const ai = new GoogleGenAI({
   apiKey: process.env.GEMINI_API_KEY,
 });
-
-// =========================
-// HYPERAGENT CONFIG
-// =========================
 
 const HF_AUTH_URL = "https://agents.integ.hf.hyperface.co/api/v1/auth/jwt/login";
 const HF_CHAT_START_URL = "https://agents.integ.hf.hyperface.co/api/v1/chat/start";
@@ -163,15 +183,15 @@ let hfTokenFetchedAt = 0;
 let hfSessionCookie = null;
 const HF_TOKEN_TTL_MS = 50 * 60 * 1000;
 
-// =========================
-// AUTH TOKEN
-// =========================
-
 async function getHFToken() {
   const now = Date.now();
 
   if (hfAccessToken && now - hfTokenFetchedAt < HF_TOKEN_TTL_MS) {
     return hfAccessToken;
+  }
+
+  if (!HF_USERNAME || !HF_PASSWORD) {
+    throw new Error("HF_USERNAME or HF_PASSWORD missing from .env");
   }
 
   const params = new URLSearchParams();
@@ -210,10 +230,6 @@ async function getHFToken() {
   return token;
 }
 
-// =========================
-// AGENT 1: OPTIMIZE DATES
-// =========================
-
 app.post("/api/optimize-campaign-dates", async (req, res) => {
   try {
     const inputData =
@@ -222,25 +238,29 @@ app.post("/api/optimize-campaign-dates", async (req, res) => {
         : await loadCalendarData();
 
     const prompt = optimizeCampaignDatesPrompt(inputData);
+    const inputTokens = estimateTokens(prompt);
 
     const response = await ai.models.generateContent({
       model: "gemini-2.5-flash",
       contents: prompt,
-      config: { responseMimeType: "application/json" },
+      config: {
+        responseMimeType: "application/json",
+      },
     });
 
     const text = response.text || "";
     const parsed = safeJsonParse(text);
+    const normalized = normalizeOptimizerResponse(parsed, text);
+    const outputTokens = estimateTokens(text);
 
     return res.json({
-      ...(parsed || { recommendations: [] }),
+      ...normalized,
       _usage: {
-        inputTokens: estimateTokens(prompt),
-        outputTokens: estimateTokens(text),
-        totalTokens: estimateTokens(prompt) + estimateTokens(text),
+        inputTokens,
+        outputTokens,
+        totalTokens: inputTokens + outputTokens,
       },
     });
-
   } catch (error) {
     console.error("Optimize error:", error);
     return res.status(500).json({
@@ -250,10 +270,6 @@ app.post("/api/optimize-campaign-dates", async (req, res) => {
   }
 });
 
-// =========================
-// AGENT 2: CAMPAIGN IDEAS
-// =========================
-
 app.post("/api/generate-high-impact-campaign-ideas", async (req, res) => {
   try {
     const inputData =
@@ -262,25 +278,29 @@ app.post("/api/generate-high-impact-campaign-ideas", async (req, res) => {
         : await loadCalendarData();
 
     const prompt = generateHighImpactCampaignIdeasPrompt(inputData);
+    const inputTokens = estimateTokens(prompt);
 
     const response = await ai.models.generateContent({
       model: "gemini-2.5-flash",
       contents: prompt,
-      config: { responseMimeType: "application/json" },
+      config: {
+        responseMimeType: "application/json",
+      },
     });
 
     const text = response.text || "";
     const parsed = safeJsonParse(text);
+    const normalized = normalizeCampaignIdeasResponse(parsed, text);
+    const outputTokens = estimateTokens(text);
 
     return res.json({
-      ...(parsed || { campaignIdeas: [] }),
+      ...normalized,
       _usage: {
-        inputTokens: estimateTokens(prompt),
-        outputTokens: estimateTokens(text),
-        totalTokens: estimateTokens(prompt) + estimateTokens(text),
+        inputTokens,
+        outputTokens,
+        totalTokens: inputTokens + outputTokens,
       },
     });
-
   } catch (error) {
     console.error("Ideas error:", error);
     return res.status(500).json({
@@ -289,10 +309,6 @@ app.post("/api/generate-high-impact-campaign-ideas", async (req, res) => {
     });
   }
 });
-
-// =========================
-// HYPERAGENT CHAT START
-// =========================
 
 app.post("/api/hf-chat/start", async (req, res) => {
   try {
@@ -334,11 +350,15 @@ app.post("/api/hf-chat/start", async (req, res) => {
       answer: extractHyperagentAnswer(parsed),
       conversation_id:
         parsed.conversation_id ||
+        parsed.conversationId ||
+        parsed.chat_id ||
+        parsed.chatId ||
         parsed.data?.conversation_id ||
+        parsed.data?.conversationId ||
         parsed.result?.conversation_id ||
+        parsed.result?.conversationId ||
         null,
     });
-
   } catch (error) {
     console.error("HF start error:", error);
     return res.status(500).json({
@@ -347,10 +367,6 @@ app.post("/api/hf-chat/start", async (req, res) => {
     });
   }
 });
-
-// =========================
-// HYPERAGENT CHAT CONTINUE
-// =========================
 
 app.post("/api/hf-chat/chat", async (req, res) => {
   try {
@@ -393,11 +409,15 @@ app.post("/api/hf-chat/chat", async (req, res) => {
       conversation_id:
         req.body.conversation_id ||
         parsed.conversation_id ||
+        parsed.conversationId ||
+        parsed.chat_id ||
+        parsed.chatId ||
         parsed.data?.conversation_id ||
+        parsed.data?.conversationId ||
         parsed.result?.conversation_id ||
+        parsed.result?.conversationId ||
         null,
     });
-
   } catch (error) {
     console.error("HF chat error:", error);
     return res.status(500).json({
@@ -406,10 +426,6 @@ app.post("/api/hf-chat/chat", async (req, res) => {
     });
   }
 });
-
-// =========================
-// START SERVER
-// =========================
 
 const port = process.env.PORT || 3000;
 

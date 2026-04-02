@@ -1,13 +1,24 @@
+const API_BASE_URL = "http://localhost:3000";
+
 let hfChatStarted = false;
 let hfConversationId = null;
-let chatbotInitialized = false;
 
 const state = {
   currentMonth: new Date(),
   selectedDate: new Date(),
   holidays: [],
   recurring: [],
-  campaigns: []
+  campaigns: [],
+  visibleCounts: {
+    holiday: 10,
+    recurring: 10,
+    campaign: 10
+  },
+  loadStep: {
+    holiday: 5,
+    recurring: 5,
+    campaign: 10
+  }
 };
 
 init();
@@ -17,57 +28,93 @@ async function init() {
 
   renderCalendar(state.currentMonth);
   renderEvents(state.selectedDate);
-
   setupChatUI();
+  setupOptimizerSuggestionChips();
+  setupLoadMoreButtons();
 
-  document.getElementById("prev-month-btn").onclick = () => changeMonth(-1);
-  document.getElementById("next-month-btn").onclick = () => changeMonth(1);
+  const prevBtn = document.getElementById("prev-month-btn");
+  const nextBtn = document.getElementById("next-month-btn");
+  const optimizerBtn = document.getElementById("run-date-optimizer-btn");
+  const ideasBtn = document.getElementById("run-campaign-ideas-btn");
 
-  const refreshBtn = document.getElementById("refresh-insights-btn");
-  if (refreshBtn) {
-    refreshBtn.onclick = () => renderInsights();
-  }
+  if (prevBtn) prevBtn.onclick = () => changeMonth(-1);
+  if (nextBtn) nextBtn.onclick = () => changeMonth(1);
+  if (optimizerBtn) optimizerBtn.onclick = runDateOptimizerAgent;
+  if (ideasBtn) ideasBtn.onclick = runCampaignIdeasAgent;
 
-  document.getElementById("run-date-optimizer-btn").onclick = runDateOptimizerAgent;
-  document.getElementById("run-campaign-ideas-btn").onclick = runCampaignIdeasAgent;
+  await runCampaignIdeasAgent({ silentLoading: true });
 }
 
 function setupChatUI() {
-  const fab = document.getElementById("ai-fab-btn");
-  const panel = document.getElementById("ai-chat-panel");
-  const closeBtn = document.getElementById("ai-chat-close");
+  const sendBtn = document.getElementById("chatbot-send-btn");
+  const input = document.getElementById("chatbot-input");
+  const newChatBtn = document.getElementById("chatbot-new-chat-btn");
 
-  if (!fab || !panel || !closeBtn) {
-    console.error("Chat UI elements not found");
-    return;
+  if (sendBtn) {
+    sendBtn.onclick = runCalendarChatbot;
   }
 
-  fab.onclick = () => {
-    const isHidden = panel.classList.contains("hidden");
-    panel.classList.toggle("hidden");
+  if (input) {
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        runCalendarChatbot();
+      }
+    });
+  }
 
-    if (isHidden && !chatbotInitialized) {
-      appendChatMessage(
-        "assistant",
-        "Hi! I can answer questions about the current calendar and suggest improvements."
-      );
-      chatbotInitialized = true;
-    }
-  };
+  if (newChatBtn) {
+    newChatBtn.onclick = startNewChatSession;
+  }
+}
 
-  closeBtn.onclick = () => {
-    panel.classList.add("hidden");
-  };
+function setupOptimizerSuggestionChips() {
+  const textarea = document.getElementById("optimize-campaign-input");
+  const chips = document.querySelectorAll(".suggestion-chip");
 
-  document.getElementById("chatbot-send-btn").onclick = runCalendarChatbot;
+  if (!textarea || !chips.length) return;
 
-  document.getElementById("chatbot-input").addEventListener("keydown", (e) => {
-    if (e.key === "Enter") {
-      runCalendarChatbot();
-    }
+  chips.forEach((chip) => {
+    chip.addEventListener("click", () => {
+      const text = chip.textContent.trim();
+
+      if (!textarea.value.trim()) {
+        textarea.value = text;
+      } else {
+        textarea.value = `${textarea.value.trim()} ${text}`;
+      }
+
+      textarea.focus();
+      textarea.setSelectionRange(textarea.value.length, textarea.value.length);
+    });
   });
+}
 
-  document.getElementById("chatbot-new-chat-btn").onclick = startNewChatSession;
+function setupLoadMoreButtons() {
+  const holidayBtn = document.getElementById("holiday-load-more-btn");
+  const recurringBtn = document.getElementById("recurring-load-more-btn");
+  const campaignBtn = document.getElementById("campaign-load-more-btn");
+
+  if (holidayBtn) {
+    holidayBtn.addEventListener("click", () => {
+      state.visibleCounts.holiday += state.loadStep.holiday;
+      renderEvents(state.selectedDate);
+    });
+  }
+
+  if (recurringBtn) {
+    recurringBtn.addEventListener("click", () => {
+      state.visibleCounts.recurring += state.loadStep.recurring;
+      renderEvents(state.selectedDate);
+    });
+  }
+
+  if (campaignBtn) {
+    campaignBtn.addEventListener("click", () => {
+      state.visibleCounts.campaign += state.loadStep.campaign;
+      renderEvents(state.selectedDate);
+    });
+  }
 }
 
 async function loadData() {
@@ -124,28 +171,28 @@ function normalizeEvent(e) {
 }
 
 function buildDateOptimizerPayload() {
+  const optimizeInput = document.getElementById("optimize-campaign-input");
+  const userBrief = optimizeInput?.value?.trim() || "";
+
   return {
     objective: "Optimize campaign dates for peak user engagement",
+    user_brief: userBrief,
     selected_date: formatISO(state.selectedDate),
-
     month_context: {
       year: state.currentMonth.getFullYear(),
       month: state.currentMonth.getMonth() + 1
     },
-
-    holidays: state.holidays.map(normalizeEvent).map(e => ({
+    holidays: state.holidays.map(normalizeEvent).map((e) => ({
       event_name: e.name,
       start_date: e.start,
       end_date: e.end
     })),
-
-    recurring_events: state.recurring.map(normalizeEvent).map(e => ({
+    recurring_events: state.recurring.map(normalizeEvent).map((e) => ({
       event_name: e.name,
       start_date: e.start,
       end_date: e.end
     })),
-
-    campaigns: state.campaigns.map(normalizeEvent).map(e => ({
+    campaigns: state.campaigns.map(normalizeEvent).map((e) => ({
       event_name: e.name,
       start_date: e.start,
       end_date: e.end,
@@ -159,25 +206,21 @@ function buildCampaignIdeasPayload() {
   return {
     objective: "Generate high impact campaign ideas",
     selected_date: formatISO(state.selectedDate),
-
     month_context: {
       year: state.currentMonth.getFullYear(),
       month: state.currentMonth.getMonth() + 1
     },
-
-    holidays: state.holidays.map(normalizeEvent).map(e => ({
+    holidays: state.holidays.map(normalizeEvent).map((e) => ({
       event_name: e.name,
       start_date: e.start,
       end_date: e.end
     })),
-
-    recurring_events: state.recurring.map(normalizeEvent).map(e => ({
+    recurring_events: state.recurring.map(normalizeEvent).map((e) => ({
       event_name: e.name,
       start_date: e.start,
       end_date: e.end
     })),
-
-    campaigns: state.campaigns.map(normalizeEvent).map(e => ({
+    campaigns: state.campaigns.map(normalizeEvent).map((e) => ({
       event_name: e.name,
       start_date: e.start,
       end_date: e.end,
@@ -197,17 +240,17 @@ function buildHFChatStartPayload(userMessage) {
         year: state.currentMonth.getFullYear(),
         month: state.currentMonth.getMonth() + 1
       },
-      holidays: state.holidays.map(normalizeEvent).map(e => ({
+      holidays: state.holidays.map(normalizeEvent).map((e) => ({
         event_name: e.name,
         start_date: e.start,
         end_date: e.end
       })),
-      recurring_events: state.recurring.map(normalizeEvent).map(e => ({
+      recurring_events: state.recurring.map(normalizeEvent).map((e) => ({
         event_name: e.name,
         start_date: e.start,
         end_date: e.end
       })),
-      campaigns: state.campaigns.map(normalizeEvent).map(e => ({
+      campaigns: state.campaigns.map(normalizeEvent).map((e) => ({
         event_name: e.name,
         start_date: e.start,
         end_date: e.end,
@@ -228,13 +271,19 @@ function isSameDate(a, b) {
 
 function renderCalendar(date) {
   const grid = document.getElementById("calendar-grid");
+  const monthLabel = document.getElementById("calendar-month-label");
+
+  if (!grid || !monthLabel) return;
+
   grid.innerHTML = "";
 
   const month = date.getMonth();
   const year = date.getFullYear();
 
-  document.getElementById("calendar-month-label").innerText =
-    date.toLocaleString("default", { month: "long", year: "numeric" });
+  monthLabel.innerText = date.toLocaleString("default", {
+    month: "long",
+    year: "numeric"
+  });
 
   const firstDay = new Date(year, month, 1).getDay();
   const lastDate = new Date(year, month + 1, 0).getDate();
@@ -242,7 +291,7 @@ function renderCalendar(date) {
 
   for (let i = 0; i < firstDay; i++) {
     const spacer = document.createElement("div");
-    spacer.className = "h-12";
+    spacer.className = "calendar-spacer";
     grid.appendChild(spacer);
   }
 
@@ -250,26 +299,29 @@ function renderCalendar(date) {
     const fullDate = new Date(year, month, d);
     const iso = formatISO(fullDate);
 
-    const hasAnyEvent =
-      [...state.holidays, ...state.recurring, ...state.campaigns]
-        .map(normalizeEvent)
-        .some(e => isInRange(iso, e.start, e.end));
+    const hasAnyEvent = [...state.holidays, ...state.recurring, ...state.campaigns]
+      .map(normalizeEvent)
+      .some((e) => isInRange(iso, e.start, e.end));
 
     const isToday = isSameDate(fullDate, today);
+    const isSelected = isSameDate(fullDate, state.selectedDate);
 
     const el = document.createElement("button");
     el.type = "button";
-    el.className = [
-      "h-12 rounded border text-sm transition",
-      "hover:bg-gray-50",
-      isToday ? "bg-blue-600 text-white border-blue-600 font-semibold" : "bg-white border-gray-200 text-gray-800",
-      !isToday && hasAnyEvent ? "ring-1 ring-blue-200" : ""
-    ].join(" ");
 
+    const classNames = [];
+    if (isSelected || isToday) classNames.push("bg-blue-600");
+    if (!isSelected && !isToday && hasAnyEvent) classNames.push("ring-1");
+
+    el.className = classNames.join(" ");
     el.innerText = d;
 
     el.onclick = () => {
       state.selectedDate = fullDate;
+      state.visibleCounts.holiday = 10;
+      state.visibleCounts.recurring = 10;
+      state.visibleCounts.campaign = 10;
+      renderCalendar(state.currentMonth);
       renderEvents(fullDate);
     };
 
@@ -282,25 +334,64 @@ function renderEvents(date) {
 
   const holidays = state.holidays
     .map(normalizeEvent)
-    .filter(e => isInRange(iso, e.start, e.end));
+    .filter((e) => isInRange(iso, e.start, e.end));
 
   const recurring = state.recurring
     .map(normalizeEvent)
-    .filter(e => isInRange(iso, e.start, e.end));
+    .filter((e) => isInRange(iso, e.start, e.end));
 
   const campaigns = state.campaigns
     .map(normalizeEvent)
-    .filter(e => isInRange(iso, e.start, e.end));
+    .filter((e) => isInRange(iso, e.start, e.end));
 
-  document.getElementById("selected-date-label").innerText = date.toDateString();
+  const holidayVisible = holidays.slice(0, state.visibleCounts.holiday);
+  const recurringVisible = recurring.slice(0, state.visibleCounts.recurring);
+  const campaignVisible = campaigns.slice(0, state.visibleCounts.campaign);
 
-  document.getElementById("holiday-count").innerText = `${holidays.length} event${holidays.length === 1 ? "" : "s"}`;
-  document.getElementById("recurring-count").innerText = `${recurring.length} event${recurring.length === 1 ? "" : "s"}`;
-  document.getElementById("campaign-count").innerText = `${campaigns.length} event${campaigns.length === 1 ? "" : "s"}`;
+  const selectedDateLabel = document.getElementById("selected-date-label");
+  const holidayCount = document.getElementById("holiday-count");
+  const recurringCount = document.getElementById("recurring-count");
+  const campaignCount = document.getElementById("campaign-count");
 
-  document.getElementById("holiday-list").innerHTML = renderEventCards(holidays, "holiday");
-  document.getElementById("recurring-list").innerHTML = renderEventCards(recurring, "recurring");
-  document.getElementById("campaign-list").innerHTML = renderEventCards(campaigns, "campaign");
+  if (selectedDateLabel) {
+    selectedDateLabel.innerText = date.toDateString();
+  }
+
+  if (holidayCount) {
+    holidayCount.innerText = `${holidays.length} event${holidays.length === 1 ? "" : "s"}`;
+  }
+
+  if (recurringCount) {
+    recurringCount.innerText = `${recurring.length} event${recurring.length === 1 ? "" : "s"}`;
+  }
+
+  if (campaignCount) {
+    campaignCount.innerText = `${campaigns.length} event${campaigns.length === 1 ? "" : "s"}`;
+  }
+
+  const holidayList = document.getElementById("holiday-list");
+  const recurringList = document.getElementById("recurring-list");
+  const campaignList = document.getElementById("campaign-list");
+
+  if (holidayList) holidayList.innerHTML = renderEventCards(holidayVisible, "holiday");
+  if (recurringList) recurringList.innerHTML = renderEventCards(recurringVisible, "recurring");
+  if (campaignList) campaignList.innerHTML = renderEventCards(campaignVisible, "campaign");
+
+  updateLoadMoreButton("holiday", holidays.length, holidayVisible.length);
+  updateLoadMoreButton("recurring", recurring.length, recurringVisible.length);
+  updateLoadMoreButton("campaign", campaigns.length, campaignVisible.length);
+}
+
+function updateLoadMoreButton(type, totalCount, visibleCount) {
+  const btn = document.getElementById(`${type}-load-more-btn`);
+  if (!btn) return;
+
+  if (visibleCount < totalCount) {
+    btn.classList.remove("hidden");
+    btn.textContent = `Load more (${totalCount - visibleCount} remaining)`;
+  } else {
+    btn.classList.add("hidden");
+  }
 }
 
 function renderEventCards(events, type) {
@@ -308,74 +399,64 @@ function renderEventCards(events, type) {
     return `<div class="text-sm text-gray-500 bg-gray-50 border border-dashed border-gray-200 rounded p-3">No events</div>`;
   }
 
-  return events.map(e => {
-    let bgClass = "bg-gray-50";
-    if (type === "holiday") bgClass = "bg-red-50";
-    if (type === "recurring") bgClass = "bg-yellow-50";
-    if (type === "campaign") bgClass = "bg-green-50";
+  return events
+    .map((e) => {
+      let bgClass = "bg-gray-50";
+      if (type === "holiday") bgClass = "bg-red-50";
+      if (type === "recurring") bgClass = "bg-yellow-50";
+      if (type === "campaign") bgClass = "bg-green-50";
 
-    const campaignMeta = type === "campaign"
-      ? `<div class="text-xs text-gray-500 mt-1">Card: ${escapeHtml(e.cardProgram)} | Benefit: ${escapeHtml(e.benefitType)}</div>`
-      : "";
+      const campaignMeta =
+        type === "campaign"
+          ? `<div class="text-xs text-gray-500 mt-1">Card: ${escapeHtml(e.cardProgram)} | Benefit: ${escapeHtml(e.benefitType)}</div>`
+          : "";
 
-    return `
-      <div class="p-3 rounded border border-gray-200 ${bgClass}">
-        <div class="font-semibold">${escapeHtml(e.name)}</div>
-        <div class="text-xs text-gray-600 mt-1">${escapeHtml(e.start)} → ${escapeHtml(e.end)}</div>
-        ${campaignMeta}
-      </div>
-    `;
-  }).join("");
+      return `
+        <div class="p-3 rounded border border-gray-200 ${bgClass}">
+          <div class="font-semibold">${escapeHtml(e.name)}</div>
+          <div class="text-xs text-gray-600 mt-1">${escapeHtml(e.start)} → ${escapeHtml(e.end)}</div>
+          ${campaignMeta}
+        </div>
+      `;
+    })
+    .join("");
 }
 
-function renderInsights() {
-  const container = document.getElementById("insights-list");
+async function readJsonResponse(response) {
+  const text = await response.text();
 
-  const allEvents = [
-    ...state.holidays.map(normalizeEvent),
-    ...state.recurring.map(normalizeEvent),
-    ...state.campaigns.map(normalizeEvent)
-  ];
-
-  const currentMonthISO = `${state.currentMonth.getFullYear()}-${String(state.currentMonth.getMonth() + 1).padStart(2, "0")}`;
-  const monthEvents = allEvents.filter(e => e.start?.startsWith(currentMonthISO) || e.end?.startsWith(currentMonthISO));
-
-  const insights = [
-    {
-      title: "Monthly Event Coverage",
-      text: `${monthEvents.length} scheduled items are loaded for this month across holidays, recurring events, and campaigns.`
-    },
-    {
-      title: "Campaign Placeholder Ready",
-      text: "Card Program and Benefit Type are available on campaign cards and can be used next for filtering and AI insight generation."
-    },
-    {
-      title: "JSON Sources Connected",
-      text: "The calendar now reads holidays.json, recurring_events.json, and campaigns.json independently."
-    }
-  ];
-
-  container.innerHTML = insights.map(i => `
-    <div class="p-4 border border-gray-200 rounded-lg">
-      <h3 class="font-semibold">${escapeHtml(i.title)}</h3>
-      <p class="text-sm text-gray-600 mt-1">${escapeHtml(i.text)}</p>
-    </div>
-  `).join("");
+  try {
+    return {
+      ok: response.ok,
+      status: response.status,
+      data: JSON.parse(text),
+      rawText: text
+    };
+  } catch {
+    return {
+      ok: response.ok,
+      status: response.status,
+      data: null,
+      rawText: text
+    };
+  }
 }
 
 async function runDateOptimizerAgent() {
-  console.log("Run Agent clicked");
-
   const statusEl = document.getElementById("date-optimizer-status");
   const resultEl = document.getElementById("date-optimizer-result");
 
-  statusEl.innerText = "Analyzing campaign timing";
-  resultEl.innerHTML = `<div class="text-sm text-gray-500"> </div>`;
+  if (statusEl) statusEl.innerText = "Analyzing campaign timing...";
+  if (resultEl) {
+    resultEl.innerHTML = `
+      <div class="text-sm text-gray-500">Reviewing timing signals and campaign context...</div>
+    `;
+  }
 
   try {
     const payload = buildDateOptimizerPayload();
 
-    const response = await fetch("http://localhost:3000/api/optimize-campaign-dates", {
+    const response = await fetch(`${API_BASE_URL}/api/optimize-campaign-dates`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -383,49 +464,58 @@ async function runDateOptimizerAgent() {
       body: JSON.stringify(payload)
     });
 
-    const data = await response.json();
-    console.log("Optimize dates response:", data);
+    const { ok, status, data, rawText } = await readJsonResponse(response);
 
-    if (!response.ok) {
-      throw new Error(data?.error || `Request failed with status ${response.status}`);
+    if (!ok) {
+      throw new Error(
+        data?.details ||
+          data?.error ||
+          rawText ||
+          `Request failed with status ${status}`
+      );
     }
 
-    const usage = data._usage;
-    statusEl.innerHTML = `
-      <div class="flex gap-2 text-xs">
-        <span class="bg-gray-100 px-2 py-1 rounded">In: ${usage?.inputTokens || 0}</span>
-        <span class="bg-gray-100 px-2 py-1 rounded">Out: ${usage?.outputTokens || 0}</span>
-        <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded">Total: ${usage?.totalTokens || 0}</span>
-      </div>
-    `;
+    if (statusEl) {
+      const usage = data?._usage;
+      statusEl.innerHTML = `
+        <div class="flex gap-2 text-xs">
+          <span class="bg-gray-100 px-2 py-1 rounded">In: ${usage?.inputTokens || 0}</span>
+          <span class="bg-gray-100 px-2 py-1 rounded">Out: ${usage?.outputTokens || 0}</span>
+          <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded">Total: ${usage?.totalTokens || 0}</span>
+        </div>
+      `;
+    }
 
     renderDateOptimizerResult(data);
-
   } catch (error) {
     console.error("Optimize dates error:", error);
 
-    statusEl.innerText = "Failed to generate recommendation.";
-    resultEl.innerHTML = `
-      <div class="p-3 rounded-lg bg-red-50 text-red-700 text-sm">
-        ${error.message || "Optimize dates request failed."}
-      </div>
-    `;
+    if (statusEl) statusEl.innerText = "Failed to generate recommendation.";
+    if (resultEl) {
+      resultEl.innerHTML = `
+        <div class="p-3 rounded-lg bg-red-50 text-red-700 text-sm">
+          ${escapeHtml(error.message || "Optimize dates request failed.")}
+        </div>
+      `;
+    }
   }
 }
 
-async function runCampaignIdeasAgent() {
-  console.log("Run Campaign Ideas clicked");
-
+async function runCampaignIdeasAgent(options = {}) {
+  const { silentLoading = false } = options;
   const statusEl = document.getElementById("campaign-ideas-status");
   const resultEl = document.getElementById("campaign-ideas-result");
 
-  statusEl.innerText = "Generating campaign ideas...";
-  resultEl.innerHTML = `<div class="text-sm text-gray-500"> </div>`;
+  if (!silentLoading) {
+    if (statusEl) statusEl.innerText = "Generating campaign ideas...";
+  } else {
+    if (statusEl) statusEl.innerText = "Loading surfaced recommendations...";
+  }
 
   try {
     const payload = buildCampaignIdeasPayload();
 
-    const response = await fetch("http://localhost:3000/api/generate-high-impact-campaign-ideas", {
+    const response = await fetch(`${API_BASE_URL}/api/generate-high-impact-campaign-ideas`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -433,33 +523,40 @@ async function runCampaignIdeasAgent() {
       body: JSON.stringify(payload)
     });
 
-    const data = await response.json();
-    console.log("Campaign ideas response:", data);
+    const { ok, status, data, rawText } = await readJsonResponse(response);
 
-    if (!response.ok) {
-      throw new Error(data?.error || `Request failed with status ${response.status}`);
+    if (!ok) {
+      throw new Error(
+        data?.details ||
+          data?.error ||
+          rawText ||
+          `Request failed with status ${status}`
+      );
     }
 
-    const usage = data._usage;
-    statusEl.innerHTML = `
-      <div class="flex gap-2 text-xs">
-        <span class="bg-gray-100 px-2 py-1 rounded">In: ${usage?.inputTokens || 0}</span>
-        <span class="bg-gray-100 px-2 py-1 rounded">Out: ${usage?.outputTokens || 0}</span>
-        <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded">Total: ${usage?.totalTokens || 0}</span>
-      </div>
-    `;
+    if (statusEl) {
+      const usage = data?._usage;
+      statusEl.innerHTML = `
+        <div class="flex gap-2 text-xs">
+          <span class="bg-gray-100 px-2 py-1 rounded">In: ${usage?.inputTokens || 0}</span>
+          <span class="bg-gray-100 px-2 py-1 rounded">Out: ${usage?.outputTokens || 0}</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded">Total: ${usage?.totalTokens || 0}</span>
+        </div>
+      `;
+    }
 
     renderCampaignIdeasResult(data);
-
   } catch (error) {
     console.error("Campaign ideas error:", error);
 
-    statusEl.innerText = "Failed to generate campaign ideas.";
-    resultEl.innerHTML = `
-      <div class="p-3 rounded-lg bg-red-50 text-red-700 text-sm">
-        ${error.message || "Campaign ideas request failed."}
-      </div>
-    `;
+    if (statusEl) statusEl.innerText = "Failed to generate campaign ideas.";
+    if (resultEl) {
+      resultEl.innerHTML = `
+        <div class="p-3 rounded-lg bg-red-50 text-red-700 text-sm">
+          ${escapeHtml(error.message || "Campaign ideas request failed.")}
+        </div>
+      `;
+    }
   }
 }
 
@@ -468,21 +565,21 @@ async function runCalendarChatbot() {
   const statusEl = document.getElementById("chatbot-status");
   const messagesEl = document.getElementById("chatbot-messages");
 
-  const question = inputEl.value.trim();
+  const question = inputEl?.value?.trim();
   if (!question) return;
 
   appendChatMessage("user", question);
   inputEl.value = "";
-  statusEl.innerText = "AI is thinking...";
+  if (statusEl) statusEl.innerText = "AI is thinking...";
 
   try {
     let response;
-    let data;
+    let parsed;
 
     if (!hfChatStarted) {
       const startPayload = buildHFChatStartPayload(question);
 
-      response = await fetch("http://localhost:3000/api/hf-chat/start", {
+      response = await fetch(`${API_BASE_URL}/api/hf-chat/start`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -490,26 +587,35 @@ async function runCalendarChatbot() {
         body: JSON.stringify(startPayload)
       });
 
-      data = await response.json();
+      parsed = await readJsonResponse(response);
 
-      if (!response.ok) {
-        throw new Error(data?.error || "Failed to start conversation");
+      if (!parsed.ok) {
+        throw new Error(
+          parsed.data?.details?.detail ||
+            parsed.data?.details?.message ||
+            parsed.data?.details ||
+            parsed.data?.error ||
+            parsed.rawText ||
+            "Failed to start conversation"
+        );
       }
 
+      const data = parsed.data;
       hfChatStarted = true;
       hfConversationId =
-        data.conversation_id ||
-        data.conversationId ||
-        data.chat_id ||
-        data.chatId ||
+        data?.conversation_id ||
+        data?.conversationId ||
+        data?.chat_id ||
+        data?.chatId ||
+        data?.data?.conversation_id ||
+        data?.result?.conversation_id ||
         null;
 
-      console.log("HF start response:", data);
-      console.log("Stored conversation_id:", hfConversationId);
-      console.log("Sending conversation_id:", hfConversationId);
-
+      const answer = extractChatAnswer(data);
+      if (statusEl) statusEl.innerText = "Ready";
+      appendChatMessage("assistant", String(answer));
     } else {
-      response = await fetch("http://localhost:3000/api/hf-chat/chat", {
+      response = await fetch(`${API_BASE_URL}/api/hf-chat/chat`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -520,37 +626,71 @@ async function runCalendarChatbot() {
         })
       });
 
-      data = await response.json();
+      parsed = await readJsonResponse(response);
 
-      if (!response.ok) {
-        throw new Error(data?.error || "Failed to continue conversation");
+      if (!parsed.ok) {
+        throw new Error(
+          parsed.data?.details?.detail ||
+            parsed.data?.details?.message ||
+            parsed.data?.details ||
+            parsed.data?.error ||
+            parsed.rawText ||
+            "Failed to continue conversation"
+        );
       }
 
-      console.log("HF chat response:", data);
+      const data = parsed.data;
+      const answer = extractChatAnswer(data);
+      if (statusEl) statusEl.innerText = "Ready";
+      appendChatMessage("assistant", String(answer));
     }
-
-    const answer =
-      data.answer ||
-      data.response ||
-      data.message ||
-      data.output ||
-      data.raw_output ||
-      "No answer returned.";
-
-    statusEl.innerText = "Ready";
-    appendChatMessage("assistant", String(answer));
-
   } catch (error) {
     console.error("Chatbot error:", error);
-    statusEl.innerText = "Failed";
+    if (statusEl) statusEl.innerText = "Failed";
     appendChatMessage("assistant", `Error: ${error.message || "Chat request failed."}`);
   }
 
-  messagesEl.scrollTop = messagesEl.scrollHeight;
+  if (messagesEl) {
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+  }
+}
+
+function extractChatAnswer(data) {
+  if (!data) return "No answer returned.";
+
+  const candidates = [
+    data.answer,
+    data.response,
+    data.message,
+    data.output,
+    data.raw_output,
+    data.data?.answer,
+    data.data?.response,
+    data.data?.message,
+    data.result?.answer,
+    data.result?.response,
+    data.result?.message,
+    data.chat_response,
+    data.data?.chat_response,
+    data.result?.chat_response
+  ];
+
+  for (const value of candidates) {
+    if (typeof value === "string" && value.trim()) {
+      return value;
+    }
+  }
+
+  if (typeof data === "object") {
+    return JSON.stringify(data, null, 2);
+  }
+
+  return String(data);
 }
 
 function renderDateOptimizerResult(data) {
   const resultEl = document.getElementById("date-optimizer-result");
+  if (!resultEl) return;
 
   const recommendations = Array.isArray(data?.recommendations)
     ? data.recommendations
@@ -573,36 +713,62 @@ function renderDateOptimizerResult(data) {
     return;
   }
 
-  resultEl.innerHTML = recommendations.map(item => `
-    <div class="p-4 rounded-xl border border-gray-200 bg-blue-50">
-      <div class="flex justify-between items-center mb-2">
-        <h4 class="font-semibold">${escapeHtml(item.event_name || "Campaign")}</h4>
-        <span class="text-xs bg-white px-2 py-1 rounded border">
-          ${escapeHtml(item.confidence || "Medium")}
-        </span>
-      </div>
+  resultEl.innerHTML = recommendations
+    .map((item) => {
+      const title =
+        item.event_name ||
+        item.title ||
+        "Campaign timing recommendation";
 
-      <div class="text-sm mb-1">
-        <strong>Current:</strong> ${escapeHtml(item.current_start_date || "-")} → ${escapeHtml(item.current_end_date || "-")}
-      </div>
+      const currentRange =
+        item.current_start_date || item.current_end_date
+          ? `${escapeHtml(item.current_start_date || "-")} → ${escapeHtml(item.current_end_date || "-")}`
+          : null;
 
-      <div class="text-sm mb-2">
-        <strong>Recommended:</strong> ${escapeHtml(item.recommended_start_date || "-")} → ${escapeHtml(item.recommended_end_date || "-")}
-      </div>
+      const recommendedRange =
+        item.recommended_start_date || item.recommended_end_date
+          ? `${escapeHtml(item.recommended_start_date || "-")} → ${escapeHtml(item.recommended_end_date || "-")}`
+          : null;
 
-      <div class="text-sm text-gray-600 mb-2">
-        ${escapeHtml(item.reason || "")}
-      </div>
+      return `
+        <div class="p-4 rounded-xl border border-gray-200 bg-blue-50">
+          <div class="flex justify-between items-center mb-2">
+            <h4 class="font-semibold">${escapeHtml(title)}</h4>
+            <span class="text-xs bg-white px-2 py-1 rounded border">
+              ${escapeHtml(item.confidence || "Medium")}
+            </span>
+          </div>
 
-      <div class="text-xs text-gray-500">
-        ${escapeHtml(item.engagement_rationale || "")}
-      </div>
-    </div>
-  `).join("");
+          ${
+            currentRange
+              ? `<div class="text-sm mb-1"><strong>Current:</strong> ${currentRange}</div>`
+              : ""
+          }
+
+          ${
+            recommendedRange
+              ? `<div class="text-sm mb-2"><strong>Recommended:</strong> ${recommendedRange}</div>`
+              : ""
+          }
+
+          <div class="text-sm text-gray-600 mb-2">
+            ${escapeHtml(item.reason || item.summary || "")}
+          </div>
+
+          ${
+            item.engagement_rationale
+              ? `<div class="text-xs text-gray-500">${escapeHtml(item.engagement_rationale)}</div>`
+              : ""
+          }
+        </div>
+      `;
+    })
+    .join("");
 }
 
 function renderCampaignIdeasResult(data) {
   const resultEl = document.getElementById("campaign-ideas-result");
+  if (!resultEl) return;
 
   const ideas = Array.isArray(data?.campaignIdeas)
     ? data.campaignIdeas
@@ -625,38 +791,48 @@ function renderCampaignIdeasResult(data) {
     return;
   }
 
-  resultEl.innerHTML = ideas.map(item => `
-    <div class="p-4 rounded-xl border border-gray-200 bg-purple-50">
-      <div class="mb-2">
-        <h4 class="font-semibold text-gray-900">${escapeHtml(item.title || "Untitled Idea")}</h4>
-      </div>
+  resultEl.innerHTML = ideas
+    .map((item) => {
+      const title = item.title || "Untitled idea";
+      const summary =
+        item.summary ||
+        item.concept ||
+        item.description ||
+        item.whyItWillWork ||
+        "";
 
-      <div class="text-sm text-gray-700 mb-2">
-        ${escapeHtml(item.concept || "")}
-      </div>
+      const targetSegment =
+        item.targetSegment ||
+        item.targetAudience ||
+        item.audience ||
+        "-";
 
-      <div class="text-sm text-gray-600 mb-2">
-        <strong>Target audience:</strong> ${escapeHtml(item.targetAudience || "-")}
-      </div>
+      const suggestedTiming =
+        item.suggestedTiming ||
+        item.seasonalFit ||
+        item.timing ||
+        "-";
 
-      <div class="text-sm text-gray-600 mb-2">
-        <strong>Merchant categories:</strong>
-        ${Array.isArray(item.merchantCategories) ? item.merchantCategories.map(escapeHtml).join(", ") : "-"}
-      </div>
+      return `
+        <article class="idea-card">
+          <h3>${escapeHtml(title)}</h3>
+          <p>${escapeHtml(summary)}</p>
 
-      <div class="text-sm text-gray-600 mb-2">
-        <strong>Spend threshold:</strong> ${escapeHtml(item.spendThreshold || "-")}
-      </div>
+          <div class="idea-meta-grid">
+            <div class="idea-meta">
+              <span class="idea-meta-label">Segment</span>
+              <span>${escapeHtml(targetSegment)}</span>
+            </div>
 
-      <div class="text-sm text-gray-600 mb-2">
-        <strong>Why it will work:</strong> ${escapeHtml(item.whyItWillWork || "-")}
-      </div>
-
-      <div class="text-sm text-gray-600">
-        <strong>Seasonal fit:</strong> ${escapeHtml(item.seasonalFit || "-")}
-      </div>
-    </div>
-  `).join("");
+            <div class="idea-meta">
+              <span class="idea-meta-label">Timing</span>
+              <span>${escapeHtml(suggestedTiming)}</span>
+            </div>
+          </div>
+        </article>
+      `;
+    })
+    .join("");
 }
 
 function changeMonth(offset) {
@@ -668,55 +844,22 @@ function changeMonth(offset) {
   renderCalendar(state.currentMonth);
 }
 
-function escapeHtml(value) {
-  return String(value)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#39;");
-}
-
-function buildChatbotPayload(userQuestion) {
-  return {
-    objective: "Calendar Copilot Chat",
-    user_question: userQuestion,
-    selected_date: formatISO(state.selectedDate),
-    month_context: {
-      year: state.currentMonth.getFullYear(),
-      month: state.currentMonth.getMonth() + 1
-    },
-    holidays: state.holidays.map(normalizeEvent).map(e => ({
-      event_name: e.name,
-      start_date: e.start,
-      end_date: e.end
-    })),
-    recurring_events: state.recurring.map(normalizeEvent).map(e => ({
-      event_name: e.name,
-      start_date: e.start,
-      end_date: e.end
-    })),
-    campaigns: state.campaigns.map(normalizeEvent).map(e => ({
-      event_name: e.name,
-      start_date: e.start,
-      end_date: e.end,
-      card_program: e.cardProgram,
-      benefit_type: e.benefitType
-    }))
-  };
-}
-
 function appendChatMessage(role, text) {
   const messagesEl = document.getElementById("chatbot-messages");
+  if (!messagesEl) return;
+
+  const wrapper = document.createElement("div");
+  wrapper.className =
+    role === "user"
+      ? "assistant-message assistant-message-user"
+      : "assistant-message assistant-message-bot";
 
   const bubble = document.createElement("div");
-  bubble.className =
-    role === "user"
-      ? "ml-auto max-w-[85%] rounded-2xl bg-blue-600 text-white px-4 py-3 text-sm"
-      : "mr-auto max-w-[85%] rounded-2xl bg-white border border-gray-200 text-gray-800 px-4 py-3 text-sm";
-
+  bubble.className = "assistant-bubble";
   bubble.textContent = text;
-  messagesEl.appendChild(bubble);
+
+  wrapper.appendChild(bubble);
+  messagesEl.appendChild(wrapper);
 }
 
 function startNewChatSession() {
@@ -726,16 +869,26 @@ function startNewChatSession() {
   const messagesEl = document.getElementById("chatbot-messages");
   const statusEl = document.getElementById("chatbot-status");
 
-  messagesEl.innerHTML = `
-    <div class="text-sm text-gray-500">
-      New chat started. Ask me anything about campaigns, timing, or planning.
-    </div>
-  `;
+  if (messagesEl) {
+    messagesEl.innerHTML = `
+      <div class="assistant-message assistant-message-bot">
+        <div class="assistant-bubble">
+          Started a fresh chat. What would you like to know?
+        </div>
+      </div>
+    `;
+  }
 
-  statusEl.innerText = "Ready";
+  if (statusEl) {
+    statusEl.innerText = "Ready";
+  }
+}
 
-  appendChatMessage(
-    "assistant",
-    "Started a fresh chat. What would you like to know?"
-  );
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
 }
