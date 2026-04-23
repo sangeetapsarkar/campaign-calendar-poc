@@ -4,19 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Smart Campaign Calendar</title>
+  <link rel="icon" type="image/png" href="favicon.png">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body class="text-gray-800">
-  <div class="workspace-shell" id="workspace-shell">
+  <div class="workspace-shell sidebar-collapsed" id="workspace-shell">
     <aside class="app-sidebar" id="app-sidebar">
       <div class="sidebar-top">
         <div class="sidebar-brand">
           <div class="brand-mark">IF</div>
           <div class="brand-copy">
-            <h2>Indigo Finance</h2>
+            <h2>Hyperface</h2>
             <p>Campaign Strategy</p>
           </div>
         </div>
@@ -49,7 +50,7 @@
     </aside>
 
     <main class="workspace-main">
-      <header class="page-header">
+      <header class="page-header page-header-row">
         <div class="page-header-copy">
           <div class="page-eyebrow">AI CAMPAIGN STRATEGY WORKSPACE</div>
           <h1>Plan campaigns with surfaced insights, not scattered tools</h1>
@@ -58,6 +59,27 @@
             strategy recommendations in a single workflow.
           </p>
         </div>
+
+      <div class="page-header-actions header-filter-wrap">
+
+        <div class="card-filter-group">
+          <label for="card-program-filter" class="card-filter-label">
+            Card Program
+          </label>
+
+          <select id="card-program-filter" class="card-filter-dropdown">
+            <option>All</option>
+            <option>EazyDiner Cards</option>
+            <option>Platinum Aura Edge</option>
+            <option>Pinnacle</option>
+          </select>
+        </div>
+
+        <button id="open-chat-btn" type="button" class="primary-action chat-launch-btn">
+          Chat
+        </button>
+
+      </div>
       </header>
 
       <section class="top-summary-row">
@@ -82,19 +104,44 @@
         </div>
       </section>
 
-      <section class="workspace-grid">
-        <!-- LEFT -->
-        <section class="workspace-column column-left">
-          <div class="panel-card calendar-panel">
-            <div class="panel-head calendar-head">
-              <div>
+      <div id="hidden-widgets-bar" class="hidden-widgets-bar hidden" aria-live="polite">
+        <div class="hidden-widgets-copy">Hidden widgets</div>
+        <div id="hidden-widgets-list" class="hidden-widgets-list"></div>
+      </div>
+
+      <section class="workspace-grid equal-width-grid">
+        <section class="workspace-column column-left widget-dropzone" id="left-column" data-column-id="left">
+          <section
+            class="panel-card calendar-combined-widget dashboard-widget"
+            id="calendar-events-widget"
+            data-widget-id="calendar-events"
+            data-widget-title="Campaign calendar"
+            draggable="true"
+          >
+            <div class="panel-head calendar-head calendar-widget-head">
+              <div class="panel-head-copy-grow">
                 <h2>Campaign calendar</h2>
               </div>
 
-              <div class="calendar-nav-wrap">
-                <button id="prev-month-btn" type="button" class="calendar-nav-btn" aria-label="Previous month">‹</button>
-                <h3 id="calendar-month-label" class="calendar-month-label"></h3>
-                <button id="next-month-btn" type="button" class="calendar-nav-btn" aria-label="Next month">›</button>
+              <div class="calendar-widget-toolbar">
+                <div class="widget-actions" aria-label="Calendar widget actions">
+                  <span class="widget-drag-handle" aria-hidden="true">⋮⋮</span>
+                  <button
+                    id="calendar-widget-hide-btn"
+                    type="button"
+                    class="ghost-action widget-action-btn"
+                    aria-label="Hide calendar widget"
+                  >
+                    Hide
+                  </button>
+                </div>
+
+                <div class="calendar-nav-wrap">
+                  <button id="prev-month-btn" type="button" class="calendar-nav-btn" aria-label="Previous month">‹</button>
+                  <h3 id="calendar-month-label" class="calendar-month-label"></h3>
+                  <button id="next-month-btn" type="button" class="calendar-nav-btn" aria-label="Next month">›</button>
+                  <button id="today-btn" type="button" class="secondary-action calendar-today-btn">Today</button>
+                </div>
               </div>
             </div>
 
@@ -108,99 +155,94 @@
               <div>Sat</div>
             </div>
 
-            <div id="calendar-grid" class="calendar-grid"></div>
+            <div class="calendar-events-body">
+              <div id="calendar-grid" class="calendar-grid"></div>
 
-            <div class="calendar-hint-strip">
-              <div class="hint-chip">AI date hints can surface here when available</div>
-            </div>
-          </div>
+              <div class="events-stack calendar-events-stack widget-content-selectable">
+                <section class="event-group compact-event-group">
+                  <div class="event-group-head">
+                    <h4>Holidays</h4>
+                  </div>
+                  <div id="holiday-list" class="event-list compact-event-list"></div>
+                  <button id="holiday-load-more-btn" class="load-more-btn hidden" type="button">Load more</button>
+                </section>
 
-          <div class="panel-card events-panel">
-            <div class="panel-head compact">
-              <div>
-                <div class="panel-eyebrow">DATE CONTEXT</div>
-                <h2>Events and campaign context</h2>
+                <section class="event-group compact-event-group">
+                  <div class="event-group-head">
+                    <h4>Recurring Events</h4>
+                  </div>
+                  <div id="recurring-list" class="event-list compact-event-list"></div>
+                  <button id="recurring-load-more-btn" class="load-more-btn hidden" type="button">Load more</button>
+                </section>
+
+                <section class="event-group compact-event-group">
+                  <div class="event-group-head">
+                    <h4>Campaigns</h4>
+                  </div>
+                  <div id="campaign-list" class="event-list compact-event-list"></div>
+                  <button id="campaign-load-more-btn" class="load-more-btn hidden" type="button">Load more</button>
+                </section>
               </div>
             </div>
-
-            <div class="events-stack">
-              <section class="event-group">
-                <div class="event-group-head">
-                  <h4>Holidays</h4>
-                </div>
-                <div id="holiday-list" class="event-list"></div>
-                <button id="holiday-load-more-btn" class="load-more-btn hidden" type="button">Load more</button>
-              </section>
-
-              <section class="event-group">
-                <div class="event-group-head">
-                  <h4>Recurring Events</h4>
-                </div>
-                <div id="recurring-list" class="event-list"></div>
-                <button id="recurring-load-more-btn" class="load-more-btn hidden" type="button">Load more</button>
-              </section>
-
-              <section class="event-group">
-                <div class="event-group-head">
-                  <h4>Campaigns</h4>
-                </div>
-                <div id="campaign-list" class="event-list"></div>
-                <button id="campaign-load-more-btn" class="load-more-btn" type="button">Load more</button>
-              </section>
-            </div>
-          </div>
+          </section>
         </section>
 
-        <!-- CENTER -->
-        <section class="workspace-column column-center">
-          <div class="panel-card ideas-panel">
-            <div class="panel-head ideas-head">
-              <div>
-                <div class="panel-eyebrow">SURFACED RECOMMENDATIONS</div>
+        <section class="workspace-column column-center widget-dropzone" id="center-column" data-column-id="center">
+          <div
+            class="panel-card ideas-panel dashboard-widget"
+            id="campaign-ideas-widget"
+            data-widget-id="campaign-ideas"
+            data-widget-title="Suggested campaign ideas"
+            draggable="true"
+          >
+            <div class="panel-head ideas-head compact-ideas-head">
+              <div class="panel-head-copy-grow">
                 <h2>Suggested campaign ideas</h2>
-                <p class="panel-copy">
-                  AI-generated ideas should appear here automatically on page load,
-                  with structured timing and audience recommendations.
-                </p>
+                <p class="panel-copy widget-subtitle-full">AI-generated campaign ideas will appear here for the current month.</p>
+              </div>
+              </div>
+              <div class="ideas-toolbar">
+               <div class="widget-actions" aria-label="Ideas widget actions">
+                  <span class="widget-drag-handle" aria-hidden="true">⋮⋮</span>
+                  <button
+                    id="campaign-ideas-widget-hide-btn"
+                    type="button"
+                    class="ghost-action widget-action-btn"
+                    aria-label="Hide suggested campaign ideas widget"
+                  >
+                    Hide
+                  </button>
+                </div>
+
+              <div class="ideas-compact-controls">
+                  <button id="campaign-ideas-prev-btn" type="button" class="ghost-action ideas-nav-btn" aria-label="Previous idea">‹</button>
+                  <span id="campaign-ideas-position" class="ideas-position-pill">1 / 5</span>
+                  <button id="campaign-ideas-next-btn" type="button" class="ghost-action ideas-nav-btn" aria-label="Next idea">›</button>
+                  <button id="campaign-ideas-undo-btn" type="button" class="ghost-action ideas-inline-btn" disabled>Undo</button>
+                  <button id="run-campaign-ideas-btn" type="button" class="secondary-action ideas-inline-btn">
+                    <span id="campaign-ideas-refresh-label">Refresh</span>
+                    <span id="campaign-ideas-refresh-spinner" class="button-spinner hidden" aria-hidden="true"></span>
+                  </button>
+                  <button 
+                    id="download-campaign-csv-btn" 
+                    type="button" 
+                    class="secondary-action ideas-inline-btn"
+                  >
+                    Download CSV
+                  </button>
               </div>
 
-              <button
-                id="run-campaign-ideas-btn"
-                type="button"
-                class="secondary-action ideas-refresh-btn"
-              >
-                Refresh ideas
-              </button>
             </div>
 
             <div id="campaign-ideas-status" class="agent-status"></div>
 
-            <div id="campaign-ideas-result" class="ideas-grid">
-              <article class="idea-card skeleton-card">
+            <div id="campaign-ideas-result" class="ideas-carousel-wrap widget-content-selectable">
+              <article class="idea-card compact-idea-card skeleton-card">
                 <div class="skeleton-line w-40"></div>
                 <div class="skeleton-line w-full"></div>
                 <div class="skeleton-line w-5/6"></div>
-                <div class="idea-meta-grid">
+                <div class="idea-stack compact-idea-stack">
                   <div class="skeleton-pill"></div>
-                  <div class="skeleton-pill"></div>
-                </div>
-              </article>
-
-              <article class="idea-card skeleton-card">
-                <div class="skeleton-line w-36"></div>
-                <div class="skeleton-line w-full"></div>
-                <div class="skeleton-line w-4/5"></div>
-                <div class="idea-meta-grid">
-                  <div class="skeleton-pill"></div>
-                  <div class="skeleton-pill"></div>
-                </div>
-              </article>
-
-              <article class="idea-card skeleton-card">
-                <div class="skeleton-line w-44"></div>
-                <div class="skeleton-line w-full"></div>
-                <div class="skeleton-line w-3/4"></div>
-                <div class="idea-meta-grid">
                   <div class="skeleton-pill"></div>
                   <div class="skeleton-pill"></div>
                 </div>
@@ -208,9 +250,64 @@
             </div>
           </div>
 
-          <div class="panel-card optimizer-panel">
+          <div
+            class="panel-card current-events-panel dashboard-widget"
+            id="current-events-widget"
+            data-widget-id="current-events"
+            data-widget-title="Current Events"
+            draggable="true"
+          >
+            <div class="panel-head compact-ideas-head">
+              <div class="panel-head-copy-grow">
+                <h2>Current Events</h2>
+                <p class="panel-copy widget-subtitle-full">Top India headlines for today, summarized for consumer and spend relevance.</p>
+              </div>
+              </div>
+            <div class="ideas-toolbar">
+            <div class="widget-actions" aria-label="Current events widget actions">
+              <span class="widget-drag-handle" aria-hidden="true">⋮⋮</span>
+              <button
+                id="current-events-widget-hide-btn"
+                type="button"
+                class="ghost-action widget-action-btn"
+                aria-label="Hide current events widget"
+              >
+                Hide
+              </button>
+            </div>
+
+            <div class="ideas-compact-controls current-events-controls">
+              <button id="current-events-prev-btn" type="button" class="ghost-action ideas-nav-btn" aria-label="Previous current event">‹</button>
+              <span id="current-events-position" class="ideas-position-pill">1 / 5</span>
+              <button id="current-events-next-btn" type="button" class="ghost-action ideas-nav-btn" aria-label="Next current event">›</button>
+              <button id="run-current-events-btn" type="button" class="secondary-action ideas-inline-btn">
+                <span id="current-events-refresh-label">Refresh</span>
+                <span id="current-events-refresh-spinner" class="button-spinner hidden" aria-hidden="true"></span>
+              </button>
+            </div>
+          </div>
+
+            <div id="current-events-status" class="agent-status"></div>
+
+            <div id="current-events-result" class="ideas-carousel-wrap widget-content-selectable">
+              <article class="idea-card compact-idea-card skeleton-card">
+                <div class="skeleton-line w-44"></div>
+                <div class="skeleton-line w-full"></div>
+                <div class="skeleton-line w-4/5"></div>
+                <div class="idea-stack compact-idea-stack">
+                  <div class="skeleton-pill"></div>
+                  <div class="skeleton-pill"></div>
+                  <div class="skeleton-pill"></div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <aside class="workspace-column column-right widget-dropzone" id="right-column" data-column-id="right">
+          <div class="panel-card optimizer-panel dashboard-widget" data-widget-id="optimizer">
             <div class="panel-head">
-              <div>
+              <div class="panel-head-copy-grow">
                 <div class="panel-eyebrow">INTERACTIVE AGENT</div>
                 <h2>Optimize campaign timing</h2>
                 <p class="panel-copy">
@@ -263,55 +360,143 @@
               </div>
             </div>
           </div>
-        </section>
+          <div 
+            id="cohort-widget" 
+            class="panel-card dashboard-widget"
+            data-widget-id="cohort-builder"
+            draggable="true"
+            >
+            <div class="panel-head">
+              <div class="panel-head-copy-grow">
+                <h2>User Cohort Builder</h2>
+                <p class="panel-copy">Define filters to build a targetable user cohort.</p>
+              </div>
+                <div class="widget-actions">
+                <span class="widget-drag-handle">⋮⋮</span>
+              </div>
+            </div>
 
-        <!-- RIGHT -->
-        <aside class="workspace-column column-right">
-          <div class="panel-card assistant-panel">
-            <div class="assistant-header">
+            <div class="cohort-filters grid grid-cols-2 gap-3 p-3">
+
               <div>
-                <div class="panel-eyebrow">ASSISTANT</div>
-                <h2>Campaign assistant</h2>
+                <label class="cohort-label">Account vintage</label>
+                <input id="cohort-account-vintage" class="cohort-input" placeholder="e.g. 1-3 or 10" />
               </div>
 
-              <button id="chatbot-new-chat-btn" type="button" class="ghost-action">
-                New chat
-              </button>
+              <div>
+                <label class="cohort-label">Card program</label>
+                <select id="cohort-card-program" class="cohort-input">
+                  <option>All</option>
+                  <option>EazyDiner Cards</option>
+                  <option>Platinum Aura Edge</option>
+                  <option>Pinnacle</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="cohort-label">Days since last txn</label>
+                <input id="cohort-days-since-txn" class="cohort-input" placeholder="e.g. 0-30" />
+              </div>
+
+              <div>
+                <label class="cohort-label">Age</label>
+                <input id="cohort-age" class="cohort-input" placeholder="e.g. 25 or 20-30" />
+              </div>
+
+              <div>
+                <label class="cohort-label">Gender</label>
+                <select id="cohort-gender" class="cohort-input">
+                  <option>All</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Others</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="cohort-label">Tier 1 Resident</label>
+                <select id="cohort-tier1" class="cohort-input">
+                  <option>All</option>
+                  <option value="true">Tier 1</option>
+                  <option value="false">Non Tier 1</option>
+                </select>
+              </div>
+
+              <div class="col-span-2">
+                <label class="cohort-label">Location</label>
+                <select id="cohort-location" multiple class="cohort-input h-24">
+                  <option>Maharashtra</option>
+                  <option>Karnataka</option>
+                  <option>Delhi</option>
+                  <option>Tamil Nadu</option>
+                  <option>Gujarat</option>
+                </select>
+              </div>
+
+            </div>
+            <div class="border-t border-gray-200 mx-3"></div>
+            <div class="cohort-actions flex gap-2 p-3">
+              <button id="run-cohort-btn" class="primary-action">Calculate</button>
+              <button id="download-cohort-btn" class="secondary-action">Download CSV</button>
             </div>
 
-            <div class="assistant-context-card">
-              <div class="assistant-context-title">Suggested prompts</div>
-              <ul class="assistant-prompt-list">
-                <li>Which campaign windows look underutilized this month?</li>
-                <li>What launch dates avoid overlap with existing campaigns?</li>
-                <li>What audience should we prioritize for the next seasonal push?</li>
-              </ul>
-            </div>
-
-            <div id="chatbot-messages" class="assistant-messages">
-              <div class="assistant-message assistant-message-bot">
-                <div class="assistant-bubble">
-                  Ask about campaign timing, overlaps, seasonal windows, or idea prioritization.
-                </div>
+            <div id="cohort-result" class="p-3">
+              <div class="bg-gray-50 border rounded-lg px-3 py-2 text-sm">
+                Total Users: -
               </div>
             </div>
-
-            <div class="assistant-input-wrap">
-              <input
-                id="chatbot-input"
-                type="text"
-                placeholder="Ask about timing, overlap, audience, or campaign ideas..."
-              />
-              <button id="chatbot-send-btn" type="button" class="assistant-send-btn">
-                Send
-              </button>
-            </div>
-
-            <div id="chatbot-status" class="assistant-status">Ready</div>
-          </div>
-        </aside>
+        </div>
       </section>
     </main>
+  </div>
+
+  <div id="chat-overlay" class="chat-overlay hidden" aria-live="polite">
+    <div class="chat-window panel-card" id="chat-overlay-panel">
+      <div class="chat-header">
+        <div>
+          <div class="panel-eyebrow">ASSISTANT</div>
+          <h2>Campaign assistant</h2>
+        </div>
+        <div class="chat-header-actions">
+          <button id="chatbot-new-chat-btn" type="button" class="ghost-action">New chat</button>
+          <button id="chat-minimize-btn" type="button" class="ghost-action">Minimize</button>
+        </div>
+      </div>
+
+      <div class="assistant-context-card chat-context-card">
+        <div class="assistant-context-title">Suggested prompts</div>
+        <ul class="assistant-prompt-list">
+          <li>Which campaign windows look underutilized this month?</li>
+          <li>What launch dates avoid overlap with existing campaigns?</li>
+          <li>What audience should we prioritize for the next seasonal push?</li>
+        </ul>
+      </div>
+
+      <div id="chatbot-messages" class="assistant-messages chat-messages">
+        <div class="assistant-message assistant-message-bot">
+          <div class="assistant-bubble">
+            Ask about campaign timing, overlaps, seasonal windows, or idea prioritization.
+          </div>
+        </div>
+      </div>
+
+      <div class="assistant-input-wrap chat-input-wrap">
+        <input
+          id="chatbot-input"
+          type="text"
+          placeholder="Ask about timing, overlap, audience, or campaign ideas..."
+        />
+        <button id="chatbot-send-btn" type="button" class="assistant-send-btn">
+          Send
+        </button>
+      </div>
+
+      <div id="chatbot-status" class="assistant-status">Ready</div>
+    </div>
+
+    <button id="chat-overlay-minimized" type="button" class="chat-minimized-pill hidden">
+      Reopen chat
+    </button>
   </div>
 
   <script>
